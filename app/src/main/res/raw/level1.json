@@ -1,0 +1,37 @@
+[
+  {
+    "frame" : "frame1",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "en", "value" : "The Cabinet of Droctor Caligari"},
+      {"lang" : "en", "value" : "The Cabinet of Dr. Caligari"},
+      {"lang" : "es", "value" : "El gabinete del Doctor Caligari"},
+      {"lang" : "es", "value" : "El gabinete del Dr. Caligari"},
+      {"lang" : "de", "value" : "Das Kabinett des Dr. Caligari"}
+    ]
+  },
+  {
+    "frame" : "frame2",
+    "lang" : "ja",
+    "title" : [
+      {"lang" : "ja", "value" : "Akira"}
+    ]
+  },
+  {
+    "frame" : "frame3",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "en", "value" : "Nosferatu"},
+      {"lang" : "de", "value" : "Nosferatu (Nosferatu, eine Symphonie des Grauens)"}
+    ]
+  },
+  {
+    "frame" : "frame4",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "The Good, the Bad, and the Ugly"},
+      {"lang" : "es", "value" : "El bueno, el feo y el malo"},
+      {"lang" : "it", "value" : "Il buono, il brutto, il cattivo"}
+    ]
+  }
+]

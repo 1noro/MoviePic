@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MoviePic - Quiz</string>
+    <string name="cancel">Cancel</string>
+    <string name="notImplementedYet">not implemented yet</string>
+
+    <string name="textLevel1">Essential</string>
+    <string name="textLevel2">Basic</string>
+    <string name="textLevel3">Vintage</string>
+    <string name="textLevel4">Advanced</string>
+
+    <string name="help1"> Guess the full movie title based on the displayed frame. </string>
+    <string name="help2"> It is not necessary to enter accents or punctuation marks in the answer. </string>
+    <string name="help3"> It doesn\'t matter if the answer is in uppercase or lowercase. </string>
+    <string name="help4"> Levels usually have 30 movies. You need to guess 20 movies before advancing to the next level. </string>
+    <string name="help5"> The game is automatically saved on your device, this means that if the app data is deleted the progress will be lost. </string>
+
+    <string name="answerButtonDesc">answer FAB</string>
+    <string name="answerTitle">Write the title</string>
+    <string name="answerCheck">Check</string>
+    <string name="answerFail">Wrong answer</string>
+    <string name="answerOk">Correct answer</string>
+    <string name="noAnswer">Write the title</string>
+    <string name="wrongAnswer">Wrong answer</string>
+    <string name="iconDescription">App Icon</string>
+
+</resources>
