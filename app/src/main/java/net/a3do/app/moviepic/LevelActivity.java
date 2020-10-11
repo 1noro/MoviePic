@@ -1,5 +1,6 @@
 package net.a3do.app.moviepic;
 
+import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -57,6 +59,14 @@ public class LevelActivity extends AppCompatActivity {
 
         generateViewPager();
         changeAnswerUIIfFrameIsAnswered();
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        View view = activity.findViewById(android.R.id.content);
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) activity.getSystemService(activity.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     public void hideTitleBar() {
@@ -120,6 +130,7 @@ public class LevelActivity extends AppCompatActivity {
             if (isThereAMatch) {
                 titleAnswered.setText(levelObj.getFrameTitleByLang(mViewPager.getCurrentItem(), Locale.getDefault().getLanguage()));
                 titleAnswerBox.clearFocus();
+                hideKeyboard(this);
                 setFABAnswered();
                 titleAnswered.setVisibility(View.VISIBLE);
                 titleAnswerBox.setVisibility(View.GONE);
