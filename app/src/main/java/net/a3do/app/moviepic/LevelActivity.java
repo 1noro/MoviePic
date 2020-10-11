@@ -85,6 +85,7 @@ public class LevelActivity extends AppCompatActivity {
             titleAnswered.setVisibility(View.VISIBLE);
             titleAnswerBox.setVisibility(View.GONE);
         } else {
+            titleAnswerBox.clearFocus();
             String lastFailedAnswer = levelObj.getLastFailedAnswer(mViewPager.getCurrentItem());
             titleAnswerBox.setText(lastFailedAnswer);
             if (lastFailedAnswer.equals("")) {
@@ -118,6 +119,7 @@ public class LevelActivity extends AppCompatActivity {
             boolean isThereAMatch = levelObj.checkTitle(mViewPager, titleToCheck);
             if (isThereAMatch) {
                 titleAnswered.setText(levelObj.getFrameTitleByLang(mViewPager.getCurrentItem(), Locale.getDefault().getLanguage()));
+                titleAnswerBox.clearFocus();
                 setFABAnswered();
                 titleAnswered.setVisibility(View.VISIBLE);
                 titleAnswerBox.setVisibility(View.GONE);

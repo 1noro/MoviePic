@@ -22,5 +22,6 @@
     <string name="answerOk">Respuesta correcta</string>
     <string name="noAnswer">Escribe el título</string>
     <string name="wrongAnswer">Respuesta incorrecta</string>
+    <string name="iconDescription">Icono de la App</string>
 
 </resources>

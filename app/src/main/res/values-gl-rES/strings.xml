@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MoviePic - Quiz</string>
+    <string name="cancel">Cancelar</string>
+    <string name="notImplementedYet">aínda non implementado</string>
+
+    <string name="textLevel1">Esencial</string>
+    <string name="textLevel2">Básico</string>
+    <string name="textLevel3">Vintage</string>
+    <string name="textLevel4">Avanzado</string>
+
+    <string name="help1">Adiviña o título completo da película baseándote no único fotograma amosado.</string>
+    <string name="help2">Non precisas introducir nin acentos nin signos de puntuación na respuesta.</string>
+    <string name="help3">Tampouco importa se a resposta está en maiúsculas o minúsculas.</string>
+    <string name="help4">Os niveis adoitan tener 30 películas cada un. É preciso adiviñar 20 películas antes de avanzar cara o siguiente nivel.</string>
+    <string name="help5">A partida gardase de forma automática no teu dispositivo. Se borras os datos da App perderase o teu progreso.</string>
+
+    <string name="answerButtonDesc">responder FAB</string>
+    <string name="answerTitle">Escribe o título</string>
+    <string name="answerCheck">Comprobar</string>
+    <string name="answerFail">Resposta incorrecta</string>
+    <string name="answerOk">Resposta correcta</string>
+    <string name="noAnswer">Escribe o título</string>
+    <string name="wrongAnswer">Resposta incorrecta</string>
+    <string name="iconDescription">Icono da App</string>
+</resources>
