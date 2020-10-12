@@ -17,12 +17,10 @@ import java.util.Objects;
 class ViewPagerAdapter extends PagerAdapter {
 
     Context context; // Context object
-//    int[] images; // Array of images
     Bitmap[] images; // Array of images
     LayoutInflater mLayoutInflater; // Layout Inflater
 
     // Viewpager Constructor
-//    public ViewPagerAdapter(Context context, int[] images) {
     public ViewPagerAdapter(Context context, Bitmap[] images) {
         this.context = context;
         this.images = images;
@@ -48,7 +46,6 @@ class ViewPagerAdapter extends PagerAdapter {
         // referencing the image view from the item.xml file
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageViewMain);
         // setting the image in the imageView
-//        imageView.setImageResource(images[position]);
         imageView.setImageBitmap(images[position]);
         // Adding the View
         Objects.requireNonNull(container).addView(itemView);
