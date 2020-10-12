@@ -117,6 +117,7 @@ public class LevelActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {}
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
             public void onPageSelected(int position) {
+                hideKeyboard(LevelActivity.this);
                 changeAnswerUIIfFrameIsAnswered();
             }
         });
