@@ -1,6 +1,8 @@
 package net.a3do.app.moviepic;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import androidx.viewpager.widget.ViewPager;
@@ -10,12 +12,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class Level {
 
     private Context context;
     private JSONArray levelArray;
     private JSONArray levelStatusArray;
-    private int[] frameList;
+//    private int[] frameList;
+    private Bitmap[] frameList;
     private String fileStatusDir;
     private String[] lastFailedAnswersArray;
 
@@ -32,20 +41,53 @@ public class Level {
         }
 
         assert this.levelArray != null;
-        this.frameList = new int[this.levelArray.length()];
+//        this.frameList = new int[this.levelArray.length()];
+        this.frameList = new Bitmap[this.levelArray.length()];
         this.lastFailedAnswersArray = new String[this.levelArray.length()];
+//        for (int i = 0; i < this.frameList.length; i++) {
+//            this.lastFailedAnswersArray[i] = "";
+//            try {
+//                this.frameList[i] = context.getResources().getIdentifier(this.levelArray.getJSONObject(i).getString("frame"), "drawable", context.getPackageName());
+//            } catch (JSONException e) {
+//                Log.d("##### EXCPETION", "ALGUNA COSA EN EL TRATAMIENTO DEL JSON, EN EL CONSTRUCTOR DE LEVEL");
+//                e.printStackTrace();
+//            }
+//        }
+
         for (int i = 0; i < this.frameList.length; i++) {
             this.lastFailedAnswersArray[i] = "";
+            // descargamos todas las imagenes y las guardamos en cache
             try {
-                this.frameList[i] = context.getResources().getIdentifier(this.levelArray.getJSONObject(i).getString("frame"), "drawable", context.getPackageName());
-            } catch (JSONException e) {
-                Log.d("##### EXCPETION", "ALGUNA COSA EN EL TRATAMIENTO DEL JSON, EN EL CONSTRUCTOR DE LEVEL");
+                String filename = this.levelArray.getJSONObject(i).getString("frame") + ".jpg";
+                Bitmap imageBitmap;
+                File cacheDir = new File(this.context.getCacheDir(), "level" + levelId);
+                cacheDir.mkdirs();
+                File imageFile = new File(cacheDir, filename);
+                if (!imageFile.exists()) {
+                    URL imageurl = new URL("https://record.rat.la/moviepic/level1/" + filename);
+                    imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                    FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
+                    imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                    fileOutputStream.flush();
+                    fileOutputStream.close();
+                } else {
+                    FileInputStream fileInputStream = new FileInputStream(imageFile);
+                    imageBitmap = BitmapFactory.decodeStream(fileInputStream);
+                }
+                this.frameList[i] = imageBitmap;
+            } catch (Exception e) {
+                Log.d("##### EXCPETION", "FALLO AL OBTENER LOS FRAMES DE INTERNET O DESDE LA CACHE");
                 e.printStackTrace();
             }
         }
+
     }
 
-    public int[] getFrameList() {
+//    public int[] getFrameList() {
+//        return frameList;
+//    }
+
+    public Bitmap[] getFrameList() {
         return frameList;
     }
 

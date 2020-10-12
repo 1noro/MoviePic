@@ -1,6 +1,7 @@
 package net.a3do.app.moviepic;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +17,13 @@ import java.util.Objects;
 class ViewPagerAdapter extends PagerAdapter {
 
     Context context; // Context object
-    int[] images; // Array of images
+//    int[] images; // Array of images
+    Bitmap[] images; // Array of images
     LayoutInflater mLayoutInflater; // Layout Inflater
 
     // Viewpager Constructor
-    public ViewPagerAdapter(Context context, int[] images) {
+//    public ViewPagerAdapter(Context context, int[] images) {
+    public ViewPagerAdapter(Context context, Bitmap[] images) {
         this.context = context;
         this.images = images;
         mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -45,7 +48,8 @@ class ViewPagerAdapter extends PagerAdapter {
         // referencing the image view from the item.xml file
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageViewMain);
         // setting the image in the imageView
-        imageView.setImageResource(images[position]);
+//        imageView.setImageResource(images[position]);
+        imageView.setImageBitmap(images[position]);
         // Adding the View
         Objects.requireNonNull(container).addView(itemView);
         return itemView;
