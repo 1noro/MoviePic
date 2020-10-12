@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.net.URL;
 
@@ -49,20 +50,35 @@ public class Level {
                 String filename = this.levelArray.getJSONObject(i).getString("frame") + ".jpg";
                 Bitmap imageBitmap;
                 File cacheDir = new File(this.context.getCacheDir(), "level" + levelId);
-                cacheDir.mkdirs();
+                boolean createdCacheLevelDir = cacheDir.mkdirs();
+                if (createdCacheLevelDir) Log.d("#DIRECTORIO CREADO#", String.valueOf(cacheDir));
                 File imageFile = new File(cacheDir, filename);
                 if (!imageFile.exists()) {
                     Log.d("#IMAGEN DESDE URL#", imageFile + " cargada desde URL");
-                    URL imageurl = new URL("https://record.rat.la/moviepic/level1/" + filename);
-                    imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                    URL imageurl = new URL("https://storage.rat.la/moviepic/level1/" + filename);
+                    try {
+                        imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                    } catch (FileNotFoundException e) {
+                        Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
+                        e.printStackTrace();
+                        imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
+                    }
                     FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
                     imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
                     fileOutputStream.flush();
                     fileOutputStream.close();
                 } else {
                     Log.d("#IMAGEN DESDE CACHE#", imageFile + " cargada desde cache");
-                    FileInputStream fileInputStream = new FileInputStream(imageFile);
-                    imageBitmap = BitmapFactory.decodeStream(fileInputStream);
+                    FileInputStream fileInputStream = null;
+                    try {
+                        fileInputStream = new FileInputStream(imageFile);
+                        imageBitmap = BitmapFactory.decodeStream(fileInputStream);
+                    } catch (FileNotFoundException e) {
+                        Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
+                        e.printStackTrace();
+                        imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
+                    }
+                    assert fileInputStream != null;
                     fileInputStream.close();
                 }
                 this.frameList[i] = imageBitmap;

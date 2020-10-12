@@ -1,6 +1,6 @@
 package net.a3do.app.moviepic;
 
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +18,8 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    ProgressDialog loading;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
 
+        loading = GameUtils.createLoading(this);
+
         try {
             JSONObject parameters = new JSONObject("{\"levelId\" : 1, \"levelFileJSONId\" : " + R.raw.level1 + "}");
             Button level1 = findViewById(R.id.buttonLevel1);
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     try {
+                        loading.show();
                         Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
                         intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
                         startActivity(intentLevel);
@@ -87,4 +92,9 @@ public class MainActivity extends AppCompatActivity {
         //actionBar.hide();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loading.dismiss();
+    }
 }

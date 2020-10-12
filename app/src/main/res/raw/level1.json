@@ -145,8 +145,10 @@
     "frame" : "frame23",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "Star Wars: Episode IV – A New Hope"},
-      {"lang" : "en", "value" : "Star Wars: Episode 4 – A New Hope"},
+      {"lang" : "en", "value" : "Star Wars: Episode IV - A New Hope"},
+      {"lang" : "en", "value" : "Star Wars: Episode IV A New Hope"},
+      {"lang" : "en", "value" : "Star Wars: Episode 4 - A New Hope"},
+      {"lang" : "en", "value" : "Star Wars: Episode 4 A New Hope"},
       {"lang" : "en", "value" : "Star Wars: A New Hope"},
       {"lang" : "en", "value" : "A New Hope"},
       {"lang" : "en", "value" : "Star Wars"},

@@ -3,6 +3,8 @@
     <string name="app_name">MoviePic - Quiz</string>
     <string name="cancel">Cancelar</string>
     <string name="notImplementedYet">aínda non implementado</string>
+    <string name="loading">Carregando</string>
+    <string name="loadingLevelMsg">Obtendo fotogramas...</string>
 
     <string name="textLevel1">Esencial</string>
     <string name="textLevel2">Básico</string>

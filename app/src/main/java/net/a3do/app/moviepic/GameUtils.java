@@ -1,5 +1,6 @@
 package net.a3do.app.moviepic;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.Gravity;
@@ -41,11 +42,11 @@ public class GameUtils {
 
     public static boolean checkTitle(@NotNull JSONArray titleArray, String titleToCheck) {
         boolean out = false;
-        titleToCheck = titleToCheck.toLowerCase().trim().replaceAll("[^a-zA-Z ]", "");
+        titleToCheck = titleToCheck.toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
         try {
             for (int i = 0; i < titleArray.length(); i++) {
-                String realTitle = titleArray.getJSONObject(i).getString("value").toLowerCase().trim().replaceAll("[^a-zA-Z ]", "");
-//                Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
+                String realTitle = titleArray.getJSONObject(i).getString("value").toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
+                Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
                 if (realTitle.equals(titleToCheck)) {
                     out = true;
                     break;
@@ -131,10 +132,19 @@ public class GameUtils {
         return out;
     }
 
-    public static void showToastOnTop(Context context, String text) {
-        Toast toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 40);
-        toast.show();
+//    public static void showToastOnTop(Context context, String text) {
+//        Toast toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+//        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 40);
+//        toast.show();
+//    }
+
+    public static ProgressDialog createLoading(Context context) {
+        ProgressDialog progress = new ProgressDialog(context);
+        progress.setTitle(context.getResources().getString(R.string.loading));
+        progress.setMessage(context.getResources().getString(R.string.loadingLevelMsg));
+        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+//        progress.show();
+        return progress;
     }
 
 }
