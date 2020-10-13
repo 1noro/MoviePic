@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.viewpager.widget.ViewPager;
 
@@ -17,6 +18,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.net.URL;
+import java.net.UnknownHostException;
 
 public class Level {
 
@@ -34,6 +36,7 @@ public class Level {
         try {
             this.levelArray = new JSONArray(GameUtils.readJsonFile(this.context, levelItemJsonId));
             this.levelStatusArray = new JSONArray(GameUtils.readLevelStatusFile(context, this.fileStatusDir));
+            Toast.makeText(context, "fileStatusDir: " + this.fileStatusDir, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Log.d("##### EXCPETION","readJsonFile || new JSONArray(data)");
             e.printStackTrace();
@@ -62,7 +65,7 @@ public class Level {
                         imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
                         fileOutputStream.flush();
                         fileOutputStream.close();
-                    } catch (FileNotFoundException e) {
+                    } catch (FileNotFoundException|UnknownHostException e) {
                         Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
                         e.printStackTrace();
                         imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);

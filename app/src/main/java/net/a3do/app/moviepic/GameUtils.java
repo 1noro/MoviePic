@@ -57,13 +57,10 @@ public class GameUtils {
     }
 
     public static String readLevelStatusFile(@NotNull Context context, String fileDir) {
-
         String ret = "";
-
-        while (true) {
-            try {
+        try {
+            while (true) {
                 InputStream inputStream = context.openFileInput(fileDir);
-
                 if (inputStream != null) {
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -80,13 +77,13 @@ public class GameUtils {
                     ret = "[]";
                 }
                 break;
-            } catch (FileNotFoundException e) {
-                Log.e("login activity", "File not found: " + e.toString());
-                writeEmptyLevelStatusFile(context, fileDir);
-            } catch (IOException e) {
-                Log.e("login activity", "Can not read file: " + e.toString());
-                ret = "[]";
             }
+        } catch (FileNotFoundException e) {
+            Log.e("login activity", "File not found: " + e.toString());
+            writeEmptyLevelStatusFile(context, fileDir);
+        } catch (IOException e) {
+            Log.e("login activity", "Can not read file: " + e.toString());
+            ret = "[]";
         }
 
         return ret;
