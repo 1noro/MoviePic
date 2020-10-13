@@ -81,6 +81,7 @@ public class GameUtils {
         } catch (FileNotFoundException e) {
             Log.e("login activity", "File not found: " + e.toString());
             writeEmptyLevelStatusFile(context, fileDir);
+            ret = readLevelStatusFile(context, fileDir);
         } catch (IOException e) {
             Log.e("login activity", "Can not read file: " + e.toString());
             ret = "[]";

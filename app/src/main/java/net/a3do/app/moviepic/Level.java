@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.viewpager.widget.ViewPager;
 
@@ -36,7 +35,7 @@ public class Level {
         try {
             this.levelArray = new JSONArray(GameUtils.readJsonFile(this.context, levelItemJsonId));
             this.levelStatusArray = new JSONArray(GameUtils.readLevelStatusFile(context, this.fileStatusDir));
-            Toast.makeText(context, "fileStatusDir: " + this.fileStatusDir, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "fileStatusDir: " + this.fileStatusDir, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Log.d("##### EXCPETION","readJsonFile || new JSONArray(data)");
             e.printStackTrace();

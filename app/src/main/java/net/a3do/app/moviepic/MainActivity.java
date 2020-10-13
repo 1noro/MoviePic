@@ -34,13 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             JSONObject parameters = new JSONObject("{\"levelId\" : 0, \"levelFileJSONId\" : " + R.raw.level0 + "}");
-            Button level0 = findViewById(R.id.buttonLevel1);
+            Button level0 = findViewById(R.id.buttonLevel0);
             level0.setOnClickListener(new MyOnClickListener(parameters) {
                 @Override
                 public void onClick(View view) {
                     try {
                         loading.show();
                         Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
                         intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
                         startActivity(intentLevel);
                     } catch (JSONException e) {
@@ -51,13 +52,14 @@ public class MainActivity extends AppCompatActivity {
             });
 
             parameters = new JSONObject("{\"levelId\" : 1, \"levelFileJSONId\" : " + R.raw.level1 + "}");
-            Button level1 = findViewById(R.id.buttonLevel2);
+            Button level1 = findViewById(R.id.buttonLevel1);
             level1.setOnClickListener(new MyOnClickListener(parameters) {
                 @Override
                 public void onClick(View view) {
                     try {
                         loading.show();
                         Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
                         intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
                         startActivity(intentLevel);
                     } catch (JSONException e) {
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button level2 = findViewById(R.id.buttonLevel3);
+            Button level2 = findViewById(R.id.buttonLevel2);
             level2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button level3 = findViewById(R.id.buttonLevel4);
+            Button level3 = findViewById(R.id.buttonLevel3);
             level3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
