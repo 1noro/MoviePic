@@ -202,11 +202,9 @@
     "lang" : "en",
     "title" : [
       {"lang" : "en", "value" : "Pirates of the Caribbean: The Curse of the Black Pearl"},
-      {"lang" : "en", "value" : "Pirates of the Caribbean"},
       {"lang" : "en", "value" : "Pirates of the Caribbean 1"},
       {"lang" : "en", "value" : "The Curse of the Black Pearl"},
       {"lang" : "es", "value" : "Piratas del Caribe: La maldición de la Perla Negra"},
-      {"lang" : "es", "value" : "Piratas del Caribe"},
       {"lang" : "es", "value" : "Piratas del Caribe 1"},
       {"lang" : "es", "value" : "La maldición de la Perla Negra"}
     ]
