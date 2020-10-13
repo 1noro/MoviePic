@@ -232,5 +232,40 @@
       {"lang" : "en", "value" : "Scarface"},
       {"lang" : "es", "value" : "El precio del poder"}
     ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "12 Angry Men"},
+      {"lang" : "en", "value" : "Twelve Angry Men"},
+      {"lang" : "es", "value" : "Doce hombres sin piedad"},
+      {"lang" : "es", "value" : "12 hombres sin piedad"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Rosemary's Baby"},
+      {"lang" : "es", "value" : "La semilla del diablo"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Green Book"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Die Hard"},
+      {"lang" : "en", "value" : "Die Hard 1"},
+      {"lang" : "es", "value" : "La jungla de cristal"},
+      {"lang" : "es", "value" : "La jungla de cristal 1"}
+    ]
   }
 ]
