@@ -3,8 +3,6 @@ package net.a3do.app.moviepic;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -46,7 +44,7 @@ public class GameUtils {
         try {
             for (int i = 0; i < titleArray.length(); i++) {
                 String realTitle = titleArray.getJSONObject(i).getString("value").toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
-                Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
+                // Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
                 if (realTitle.equals(titleToCheck)) {
                     out = true;
                     break;

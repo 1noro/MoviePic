@@ -55,18 +55,18 @@ public class Level {
                 File imageFile = new File(cacheDir, filename);
                 if (!imageFile.exists()) {
                     Log.d("#IMAGEN DESDE URL#", imageFile + " cargada desde URL");
-                    URL imageurl = new URL("https://storage.rat.la/moviepic/level1/" + filename);
+                    URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
                     try {
                         imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                        FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
+                        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                        fileOutputStream.flush();
+                        fileOutputStream.close();
                     } catch (FileNotFoundException e) {
                         Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
                         e.printStackTrace();
                         imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
                     }
-                    FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
-                    imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
-                    fileOutputStream.flush();
-                    fileOutputStream.close();
                 } else {
                     Log.d("#IMAGEN DESDE CACHE#", imageFile + " cargada desde cache");
                     FileInputStream fileInputStream = null;

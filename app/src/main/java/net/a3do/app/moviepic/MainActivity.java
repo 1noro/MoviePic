@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         loading = GameUtils.createLoading(this);
 
         try {
-            JSONObject parameters = new JSONObject("{\"levelId\" : 1, \"levelFileJSONId\" : " + R.raw.level1 + "}");
+            JSONObject parameters = new JSONObject("{\"levelId\" : 0, \"levelFileJSONId\" : " + R.raw.level0 + "}");
             Button level1 = findViewById(R.id.buttonLevel1);
             level1.setOnClickListener(new MyOnClickListener(parameters) {
                 @Override
