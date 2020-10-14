@@ -25,5 +25,6 @@
     <string name="noAnswer">Escribe o título</string>
     <string name="wrongAnswer">Resposta incorrecta</string>
     <string name="iconDescription">Icono da App</string>
-    <string name="levelNotAccesible">Acerta 20 no nivel anterior</string>
+    <string name="levelNotAccesible1">Acerta</string>
+    <string name="levelNotAccesible2">no nivel anterior</string>
 </resources>

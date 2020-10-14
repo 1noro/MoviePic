@@ -55,14 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     try {
-                        if (new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus0.json")).length() >= 20) {
+                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus0.json"));
+                        if (previousLevelStatus.length() >= 20) {
                             loading.show();
                             Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
                             intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
                             intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
                             startActivity(intentLevel);
                         } else {
-                            Toast.makeText(MainActivity.this, getResources().getString(R.string.levelNotAccesible), Toast.LENGTH_SHORT).show();
+                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
+                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {e.printStackTrace();}
                 }
