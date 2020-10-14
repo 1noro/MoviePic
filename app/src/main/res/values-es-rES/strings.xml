@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MoviePic - Quiz</string>
+    <string name="app_name">MoviePic</string>
     <string name="cancel">Cancelar</string>
     <string name="notImplementedYet">no implementado aún</string>
     <string name="loading">Cargando</string>
@@ -25,5 +25,5 @@
     <string name="noAnswer">Escribe el título</string>
     <string name="wrongAnswer">Respuesta incorrecta</string>
     <string name="iconDescription">Icono de la App</string>
-
+    <string name="levelNotAccesible">Acierta 20 en el nivel anterior</string>
 </resources>

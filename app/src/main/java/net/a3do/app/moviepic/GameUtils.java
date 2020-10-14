@@ -44,7 +44,7 @@ public class GameUtils {
         try {
             for (int i = 0; i < titleArray.length(); i++) {
                 String realTitle = titleArray.getJSONObject(i).getString("value").toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
-                // Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
+                 Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
                 if (realTitle.equals(titleToCheck)) {
                     out = true;
                     break;

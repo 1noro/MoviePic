@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,10 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
                         intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
                         startActivity(intentLevel);
-                    } catch (JSONException e) {
-                        Log.d("##### EXCPETION","this.params.getInt(\"levelFileJSON\")");
-                        e.printStackTrace();
-                    }
+                    } catch (JSONException e) {e.printStackTrace();}
                 }
             });
 
@@ -57,15 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     try {
-                        loading.show();
-                        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                        intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                        startActivity(intentLevel);
-                    } catch (JSONException e) {
-                        Log.d("##### EXCPETION","this.params.getInt(\"levelFileJSON\")");
-                        e.printStackTrace();
-                    }
+                        if (new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus0.json")).length() >= 20) {
+                            loading.show();
+                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
+                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
+                            startActivity(intentLevel);
+                        } else {
+                            Toast.makeText(MainActivity.this, getResources().getString(R.string.levelNotAccesible), Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (JSONException e) {e.printStackTrace();}
                 }
             });
 

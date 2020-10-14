@@ -44,7 +44,6 @@
     "title" : [
       {"lang" : "en", "value" : "Spirited Away"},
       {"lang" : "es", "value" : "El viaje de Chihiro"},
-      {"lang" : "jp", "value" : "千と千尋の神隠し"},
       {"lang" : "jp", "value" : "Sen to Chihiro no kamikakushi"},
       {"lang" : "jp", "value" : "Chihiro"}
     ]
@@ -102,7 +101,6 @@
       {"lang" : "en", "value" : "7 Samurai"},
       {"lang" : "es", "value" : "Los siete samuráis"},
       {"lang" : "es", "value" : "Los 7 samuráis"},
-      {"lang" : "jp", "value" : "七人の侍"},
       {"lang" : "jp", "value" : "Shichinin no Samurai"}
     ]
   },
@@ -198,9 +196,7 @@
     "frame" : "frame53",
     "lang" : "ko",
     "title" : [
-      {"lang" : "en", "value" : "Oldboy"},
-      {"lang" : "ko", "value" : "올드보이 (Oldboy)"},
-      {"lang" : "ko", "value" : "올드보이"}
+      {"lang" : "ko", "value" : "Oldboy"}
     ]
   },
   {
