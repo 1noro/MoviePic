@@ -21,5 +21,90 @@
       {"lang" : "en", "value" : "A Night at the Opera"},
       {"lang" : "es", "value" : "Una noche en la ópera"}
     ]
+  },{
+    "frame" : "frame0",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups (Les 400 Coups)"},
+      {"lang" : "fr", "value" : "Les 400 Coups"},
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups"},
+      {"lang" : "es", "value" : "Los cuatrocientos golpes (Los 400 golpes)"},
+      {"lang" : "es", "value" : "Los 400 golpes"},
+      {"lang" : "es", "value" : "Los cuatrocientos golpes"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "es",
+    "title" : [
+      {"lang" : "es", "value" : "Atraco a las tres"},
+      {"lang" : "es", "value" : "Atraco a las 3"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Casablanca"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "One, Two, Three"},
+      {"lang" : "es", "value" : "Uno, dos, tres"},
+      {"lang" : "es", "value" : "Un, dos, tres"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "It's a Wonderful Life"},
+      {"lang" : "es", "value" : "Qué bello es vivir"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "jp",
+    "title" : [
+      {"lang" : "jp", "value" : "Harakiri (Seppuku)"},
+      {"lang" : "jp", "value" : "Harakiri"},
+      {"lang" : "jp", "value" : "Seppuku"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "To Kill a Mockingbird"},
+      {"lang" : "es", "value" : "Matar a un ruiseñor"},
+      {"lang" : "es", "value" : "Matar un ruiseñor"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Paths of Glory"},
+      {"lang" : "es", "value" : "Senderos de gloria"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Sunrise: A Song of Two Humans"},
+      {"lang" : "en", "value" : "Sunrise"},
+      {"lang" : "en", "value" : "A Song of Two Humans"},
+      {"lang" : "es", "value" : "Amanecer"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Man Who Shot Liberty Valance"},
+      {"lang" : "es", "value" : "El hombre que mató a Liberty Valance"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "de", "value" : "M"},
+      {"lang" : "es", "value" : "M, el vampiro de Düsseldorf"}
+    ]
   }
 ]
