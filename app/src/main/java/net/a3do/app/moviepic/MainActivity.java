@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
         // Quitamos la barra del titulo
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(getSupportActionBar()).hide();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
+        // Mostrar el código del idioma al iniciar
+//        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
 
         loading = GameUtils.createLoading(this);
 
@@ -99,6 +100,15 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.notImplementedYet), Toast.LENGTH_SHORT).show();
                 }
             });
+
+            Button level4 = findViewById(R.id.buttonLevel4);
+            level4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(MainActivity.this, getResources().getString(R.string.notImplementedYet), Toast.LENGTH_SHORT).show();
+                }
+            });
+
         } catch (JSONException e) {
             Log.d("##### EXCPETION", "jsonResponse.get || new JSONObject(...)");
             e.printStackTrace();

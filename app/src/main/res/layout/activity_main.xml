@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minWidth="120dp"
-                android:text="@string/textLevel1" />
+                android:text="@string/textLevel0" />
 
             <Button
                 android:id="@+id/buttonLevel1"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minWidth="120dp"
-                android:text="@string/textLevel2" />
+                android:text="@string/textLevel1" />
 
         </TableRow>
 
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minWidth="120dp"
-                android:text="@string/textLevel3" />
+                android:text="@string/textLevel2" />
 
             <Button
                 android:id="@+id/buttonLevel3"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minWidth="120dp"
-                android:text="@string/textLevel4" />
+                android:text="@string/textLevel3" />
 
         </TableRow>
 

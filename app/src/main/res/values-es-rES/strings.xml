@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MoviePic</string>
     <string name="cancel">Cancelar</string>
     <string name="notImplementedYet">no implementado aún</string>
     <string name="loading">Cargando</string>
     <string name="loadingLevelMsg">Obteniendo fotogramas…</string>
 
-    <string name="textLevel1">Esencial</string>
-    <string name="textLevel2">Básico</string>
-    <string name="textLevel3">Vintage</string>
-    <string name="textLevel4">Avanzado</string>
+    <string name="textLevel0">Esencial</string>
+    <string name="textLevel1">Básico</string>
+    <string name="textLevel2">B &amp; N</string>
+    <string name="textLevel3">Intantil</string>
+    <string name="textLevel4">Moderado</string>
 
     <string name="help1">Adivina el título completo de la película basándote en el fotograma mostrado.</string>
     <string name="help2">No es necesario introducir ni acentos ni signos de puntuación en la respuesta.</string>
@@ -27,4 +27,5 @@
     <string name="iconDescription">Icono de la App</string>
     <string name="levelNotAccesible1">Acierta</string>
     <string name="levelNotAccesible2">en el nivel anterior</string>
+    <string name="license">por Inoro\nGPL3 o posterior</string>
 </resources>

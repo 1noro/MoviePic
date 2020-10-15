@@ -1,14 +1,16 @@
 <resources>
-    <string name="app_name">MoviePic</string>
+    <string name="app_name" translatable="false">MoviePic</string>
     <string name="cancel">Cancel</string>
     <string name="notImplementedYet">not implemented yet</string>
     <string name="loading">Loading</string>
     <string name="loadingLevelMsg">Getting frames…</string>
 
-    <string name="textLevel1">Essential</string>
-    <string name="textLevel2">Basic</string>
-    <string name="textLevel3">Vintage</string>
-    <string name="textLevel4">Advanced</string>
+    <string name="textLevelToDefine" translatable="false">¿?</string>
+    <string name="textLevel0">Essential</string>
+    <string name="textLevel1">Basic</string>
+    <string name="textLevel2">B &amp; W</string>
+    <string name="textLevel3">Childish</string>
+    <string name="textLevel4">Moderate</string>
 
     <string name="help1"> Guess the full movie title based on the displayed frame. </string>
     <string name="help2"> It is not necessary to enter accents or punctuation marks in the answer. </string>
@@ -26,4 +28,5 @@
     <string name="iconDescription">App Icon</string>
     <string name="levelNotAccesible1">Match</string>
     <string name="levelNotAccesible2">in the previous level</string>
+    <string name="license">by Inoro\nGPL3 or later</string>
 </resources>
