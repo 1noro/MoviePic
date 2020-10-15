@@ -1,0 +1,25 @@
+[
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Psycho"},
+      {"lang" : "es", "value" : "Psicosis"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "sv",
+    "title" : [
+      {"lang" : "en", "value" : "The Seventh Seal"},
+      {"lang" : "es", "value" : "El séptimo sello"},
+      {"lang" : "sv", "value" : "Det sjunde inseglet"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "A Night at the Opera"},
+      {"lang" : "es", "value" : "Una noche en la ópera"}
+    ]
+  }
+]
