@@ -3,7 +3,7 @@
     <string name="cancel">Cancel</string>
     <string name="notImplementedYet">not implemented yet</string>
     <string name="loading">Loading</string>
-    <string name="loadingLevelMsg">Getting frames...</string>
+    <string name="loadingLevelMsg">Getting frames…</string>
 
     <string name="textLevel1">Essential</string>
     <string name="textLevel2">Basic</string>

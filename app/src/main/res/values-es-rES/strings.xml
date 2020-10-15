@@ -4,7 +4,7 @@
     <string name="cancel">Cancelar</string>
     <string name="notImplementedYet">no implementado aún</string>
     <string name="loading">Cargando</string>
-    <string name="loadingLevelMsg">Obteniendo fotogramas...</string>
+    <string name="loadingLevelMsg">Obteniendo fotogramas…</string>
 
     <string name="textLevel1">Esencial</string>
     <string name="textLevel2">Básico</string>

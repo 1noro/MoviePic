@@ -12,13 +12,14 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.json.JSONException;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -65,7 +66,11 @@ public class LevelActivity extends AppCompatActivity {
         titleAnswered.setSingleLine(true);
 
         generateViewPager();
-        changeAnswerUIIfFrameIsAnswered();
+        try {
+            changeAnswerUIIfFrameIsAnswered();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void hideKeyboard(Activity activity) {
@@ -84,17 +89,17 @@ public class LevelActivity extends AppCompatActivity {
 
     public void setFABAnswered() {
         FloatingActionButton buttonAnswer = findViewById(R.id.buttonAnswer);
-        buttonAnswer.setImageResource(R.drawable.check3);
+        buttonAnswer.setImageResource(R.drawable.check);
         buttonAnswer.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getApplicationContext(), R.color.green)));
     }
 
     public void setFABNotAnswered() {
         FloatingActionButton buttonAnswer = findViewById(R.id.buttonAnswer);
-        buttonAnswer.setImageResource(R.drawable.question3);
+        buttonAnswer.setImageResource(R.drawable.question);
         buttonAnswer.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getApplicationContext(), R.color.red)));
     }
 
-    public void changeAnswerUIIfFrameIsAnswered() {
+    public void changeAnswerUIIfFrameIsAnswered() throws JSONException {
         boolean isFrameAnswered = levelObj.checkFrameAnswered(mViewPager.getCurrentItem());
         if (isFrameAnswered) {
             titleAnswered.setText(levelObj.getFrameTitleByLang(mViewPager.getCurrentItem(), Locale.getDefault().getLanguage()));
@@ -125,12 +130,14 @@ public class LevelActivity extends AppCompatActivity {
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
             public void onPageSelected(int position) {
                 hideKeyboard(LevelActivity.this);
-                changeAnswerUIIfFrameIsAnswered();
+                try {
+                    changeAnswerUIIfFrameIsAnswered();
+                } catch (JSONException e) {e.printStackTrace();}
             }
         });
     }
 
-    public void answerFAB(View view) {
+    public void answerFAB(View view) throws JSONException {
         boolean isFrameAnswered = levelObj.checkFrameAnswered(mViewPager.getCurrentItem());
         if (!isFrameAnswered) {
             String titleToCheck = titleAnswerBox.getText().toString();

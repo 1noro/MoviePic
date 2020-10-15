@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.net.UnknownHostException;
 
@@ -35,11 +36,8 @@ public class Level {
         try {
             this.levelArray = new JSONArray(GameUtils.readJsonFile(this.context, levelItemJsonId));
             this.levelStatusArray = new JSONArray(GameUtils.readLevelStatusFile(context, this.fileStatusDir));
-//            Toast.makeText(context, "fileStatusDir: " + this.fileStatusDir, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            Log.d("##### EXCPETION","readJsonFile || new JSONArray(data)");
-            e.printStackTrace();
-        }
+        } catch (IOException|JSONException e) {e.printStackTrace();}
+
 
         assert this.levelArray != null;
         this.frameList = new Bitmap[this.levelArray.length()];
@@ -53,10 +51,10 @@ public class Level {
                 Bitmap imageBitmap;
                 File cacheDir = new File(this.context.getCacheDir(), "level" + levelId);
                 boolean createdCacheLevelDir = cacheDir.mkdirs();
-                if (createdCacheLevelDir) Log.d("#DIRECTORIO CREADO#", String.valueOf(cacheDir));
+                if (createdCacheLevelDir) Log.d("Carpeta creada", String.valueOf(cacheDir));
                 File imageFile = new File(cacheDir, filename);
                 if (!imageFile.exists()) {
-                    Log.d("#IMAGEN DESDE URL#", imageFile + " cargada desde URL");
+                    Log.d("CARGA DESDE URL", imageFile + " cargada desde URL");
                     URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
                     try {
                         imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
@@ -65,18 +63,18 @@ public class Level {
                         fileOutputStream.flush();
                         fileOutputStream.close();
                     } catch (FileNotFoundException|UnknownHostException e) {
-                        Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
+                        Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
                         e.printStackTrace();
                         imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
                     }
                 } else {
-                    Log.d("#IMAGEN DESDE CACHE#", imageFile + " cargada desde cache");
+                    Log.d("CARGA DESDE CACHE", imageFile + " cargada desde cache");
                     FileInputStream fileInputStream = null;
                     try {
                         fileInputStream = new FileInputStream(imageFile);
                         imageBitmap = BitmapFactory.decodeStream(fileInputStream);
                     } catch (FileNotFoundException e) {
-                        Log.d("#FileNotFoundException#", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
+                        Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
                         e.printStackTrace();
                         imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
                     }
@@ -85,7 +83,7 @@ public class Level {
                 }
                 this.frameList[i] = imageBitmap;
             } catch (Exception e) {
-                Log.d("##### EXCPETION", "FALLO AL OBTENER LOS FRAMES DE INTERNET O DESDE LA CACHE");
+                Log.d("Excepción", "Fallo al obtener los frames desde internet o desde la cache.");
                 e.printStackTrace();
             }
         }
@@ -96,41 +94,49 @@ public class Level {
         return frameList;
     }
 
-    public boolean checkTitle(@NotNull ViewPager mViewPager, String titleToCheck) {
+    public boolean checkTitle(@NotNull ViewPager mViewPager, String titleToCheck) throws JSONException {
         boolean out = false;
-        try {
-            if (GameUtils.checkTitle(levelArray.getJSONObject(mViewPager.getCurrentItem()).getJSONArray("title"), titleToCheck)) {
-                levelStatusArray.put(mViewPager.getCurrentItem());
-                GameUtils.writeToFile(context, this.fileStatusDir, levelStatusArray.toString());
-                out = true;
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if (GameUtils.checkTitle(levelArray.getJSONObject(mViewPager.getCurrentItem()).getJSONArray("title"), titleToCheck)) {
+            levelStatusArray.put(mViewPager.getCurrentItem());
+            GameUtils.writeToFile(context, this.fileStatusDir, levelStatusArray.toString());
+            out = true;
         }
         return out;
     }
 
-    public boolean checkFrameAnswered(int frameId) {
+    public boolean checkFrameAnswered(int frameId) throws JSONException {
         boolean out = false;
         if (GameUtils.findIntInJSONArray(levelStatusArray, frameId)) out = true;
         return out;
     }
 
-    public String getFrameTitleByLang(int frameId, String langId) {
+    public String getFrameTitleByLang(int frameId, String langId) throws JSONException {
         String out = "Null.";
-        try {
-            JSONArray frameTitles = levelArray.getJSONObject(frameId).getJSONArray("title");
-            for (int i = 0; i < frameTitles.length(); i++) {
-                JSONObject frameTitleObject = frameTitles.getJSONObject(i);
-//                Log.d("$$$COMPARATIVA$$$", "¿ " + frameTitleObject.getString("lang") + " == " + langId + " ?");
-                if (frameTitleObject.getString("lang").equals(langId)) {
-                    out = frameTitleObject.getString("value");
-                    break;
-                }
+        String originalTitle = "Null.";
+        JSONArray frameTitles = levelArray.getJSONObject(frameId).getJSONArray("title");
+        String originalLangId = levelArray.getJSONObject(frameId).getString("lang");
+        for (int i = 0; i < frameTitles.length(); i++) {
+            JSONObject frameTitleObject = frameTitles.getJSONObject(i);
+            if (frameTitleObject.getString("lang").equals(langId)) {
+                out = frameTitleObject.getString("value");
+                break;
             }
-            if (out.equals("Null.")) out = frameTitles.getJSONObject(0).getString("value");
-        } catch (JSONException e) {
-            e.printStackTrace();
+        }
+        for (int i = 0; i < frameTitles.length(); i++) {
+            JSONObject frameTitleObject = frameTitles.getJSONObject(i);
+            if (frameTitleObject.getString("lang").equals(originalLangId)) {
+                originalTitle = frameTitleObject.getString("value");
+                break;
+            }
+        }
+        if (out.equals("Null.")) {
+            out = originalTitle;
+            Log.d("Error obteniendo titulo", "El titulo no se encuentra en el idioma por defecto, asignando título original: " + originalTitle + ".");
+        }
+        if (out.equals("Null.")) {
+            String primerTituloEncontrado = frameTitles.getJSONObject(0).getString("value");
+            out = primerTituloEncontrado;
+            Log.d("Error obt. titulo ori.", "El titulo original no se encuentra. Asignando el primer título encontrado: " + primerTituloEncontrado + ".");
         }
         return out;
     }

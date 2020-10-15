@@ -22,7 +22,7 @@ import java.nio.charset.StandardCharsets;
 public class GameUtils {
 
     @NotNull
-    public static String readJsonFile(@NotNull Context context, int id) throws Exception {
+    public static String readJsonFile(@NotNull Context context, int id) throws IOException {
         InputStream is = context.getResources().openRawResource(id);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
@@ -38,33 +38,42 @@ public class GameUtils {
         return writer.toString();
     }
 
-    public static boolean checkTitle(@NotNull JSONArray titleArray, String titleToCheck) {
+    public static String normalizeText(String txt) {
+        txt = txt.trim();
+        txt = txt.toLowerCase();
+        txt = txt.replaceAll("á", "a");
+        txt = txt.replaceAll("é", "e");
+        txt = txt.replaceAll("í", "i");
+        txt = txt.replaceAll("ó", "o");
+        txt = txt.replaceAll("ú", "u");
+        txt = txt.replaceAll("ü", "u");
+        txt = txt.replaceAll("[^a-zA-Z0-9 ]", "");
+        return txt;
+    }
+
+    public static boolean checkTitle(@NotNull JSONArray titleArray, String titleToCheck) throws JSONException {
         boolean out = false;
-        titleToCheck = titleToCheck.toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
-        try {
-            for (int i = 0; i < titleArray.length(); i++) {
-                String realTitle = titleArray.getJSONObject(i).getString("value").toLowerCase().trim().replaceAll("[^a-zA-Z0-9 ]", "");
-                 Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
-                if (realTitle.equals(titleToCheck)) {
-                    out = true;
-                    break;
-                }
+        titleToCheck = normalizeText(titleToCheck);
+        for (int i = 0; i < titleArray.length(); i++) {
+            String realTitle = normalizeText(titleArray.getJSONObject(i).getString("value"));
+             Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
+            if (realTitle.equals(titleToCheck)) {
+                out = true;
+                break;
             }
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
         return out;
     }
 
     public static String readLevelStatusFile(@NotNull Context context, String fileDir) {
-        String ret = "";
+        String ret;
         try {
             while (true) {
                 InputStream inputStream = context.openFileInput(fileDir);
                 if (inputStream != null) {
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                    String receiveString = "";
+                    String receiveString;
                     StringBuilder stringBuilder = new StringBuilder();
 
                     while ((receiveString = bufferedReader.readLine()) != null) {
@@ -112,17 +121,12 @@ public class GameUtils {
         }
     }
 
-    public static boolean findIntInJSONArray(@NotNull JSONArray jArray, int number) {
+    public static boolean findIntInJSONArray(@NotNull JSONArray jArray, int number) throws JSONException {
         boolean out = false;
         for (int i = 0; i < jArray.length(); i++) {
-            try {
-                if (jArray.getInt(i) == number) {
-                    out = true;
-                    break;
-                }
-            } catch (JSONException e) {
-                Log.d("Error:", "El JSONArray no contiene un Int en esta posición.");
-                e.printStackTrace();
+            if (jArray.getInt(i) == number) {
+                out = true;
+                break;
             }
         }
         return out;

@@ -17,7 +17,7 @@
         android:layout_marginBottom="15dp"
         android:contentDescription="@string/answerButtonDesc"
         android:onClick="answerFAB"
-        android:src="@drawable/question3"
+        android:src="@drawable/question"
         app:backgroundTint="@color/red" />
 
     <androidx.viewpager.widget.ViewPager
