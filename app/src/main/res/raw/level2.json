@@ -25,12 +25,14 @@
     "frame" : "frame0",
     "lang" : "fr",
     "title" : [
-      {"lang" : "fr", "value" : "Les Quatre Cents Coups (Les 400 Coups)"},
-      {"lang" : "fr", "value" : "Les 400 Coups"},
-      {"lang" : "fr", "value" : "Les Quatre Cents Coups"},
+      {"lang" : "en", "value" : "The 400 Blows"},
+      {"lang" : "en", "value" : "The four hundred Blows"},
       {"lang" : "es", "value" : "Los cuatrocientos golpes (Los 400 golpes)"},
       {"lang" : "es", "value" : "Los 400 golpes"},
-      {"lang" : "es", "value" : "Los cuatrocientos golpes"}
+      {"lang" : "es", "value" : "Los cuatrocientos golpes"},
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups (Les 400 Coups)"},
+      {"lang" : "fr", "value" : "Les 400 Coups"},
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups"}
     ]
   },{
     "frame" : "frame0",
@@ -103,8 +105,113 @@
     "frame" : "frame0",
     "lang" : "de",
     "title" : [
+      {"lang" : "es", "value" : "M, el vampiro de Düsseldorf"},
       {"lang" : "de", "value" : "M"},
-      {"lang" : "es", "value" : "M, el vampiro de Düsseldorf"}
+      {"lang" : "de", "value" : "M - Eine Stadt sucht einen Mörder"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Great Dictator"},
+      {"lang" : "es", "value" : "El gran dictador"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "it", "value" : "La dolce vita"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "jp",
+    "title" : [
+      {"lang" : "jp", "value" : "Rashomon"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "All About Eve"},
+      {"lang" : "es", "value" : "Eva al desnudo"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "Bicycle Thieves"},
+      {"lang" : "es", "value" : "Ladrón de bicicletas"},
+      {"lang" : "it", "value" : "Ladri di biciclette"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "The Passion of Joan of Arc"},
+      {"lang" : "es", "value" : "La pasión de Juana de Arco"},
+      {"lang" : "fr", "value" : "La Passion de Jeanne d'Arc"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Freaks"},
+      {"lang" : "es", "value" : "La parada de los monstruos"},
+      {"lang" : "es", "value" : "Freaks, la parada de los monstruos"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Touch of Evil"},
+      {"lang" : "es", "value" : "Sed de mal"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "Rome, Open City"},
+      {"lang" : "en", "value" : "Open City"},
+      {"lang" : "es", "value" : "Roma, ciudad abierta"},
+      {"lang" : "it", "value" : "Roma città aperta"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Bringing Up Baby"},
+      {"lang" : "es", "value" : "La fiera de mi niña"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Judgment at Nuremberg"},
+      {"lang" : "es", "value" : "¿Vencedores o vencidos? (El juicio de Nuremberg)"},
+      {"lang" : "es", "value" : "¿Vencedores o vencidos?"},
+      {"lang" : "es", "value" : "El juicio de Nuremberg"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The General"},
+      {"lang" : "es", "value" : "El maquinista de La General"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "Breathless"},
+      {"lang" : "es", "value" : "Al final de la escapada"},
+      {"lang" : "fr", "value" : "À bout de souffle"}
+    ]
+  },{
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Captains Courageous"},
+      {"lang" : "es", "value" : "Capitanes intrépidos"}
     ]
   }
 ]

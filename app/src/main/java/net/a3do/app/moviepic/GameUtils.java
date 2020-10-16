@@ -42,11 +42,21 @@ public class GameUtils {
         txt = txt.trim();
         txt = txt.toLowerCase();
         txt = txt.replaceAll("á", "a");
+        txt = txt.replaceAll("à", "a");
+        txt = txt.replaceAll("ä", "a");
         txt = txt.replaceAll("é", "e");
+        txt = txt.replaceAll("è", "e");
+        txt = txt.replaceAll("ë", "e");
         txt = txt.replaceAll("í", "i");
+        txt = txt.replaceAll("ì", "i");
+        txt = txt.replaceAll("ï", "i");
         txt = txt.replaceAll("ó", "o");
+        txt = txt.replaceAll("ò", "o");
+        txt = txt.replaceAll("ö", "o");
         txt = txt.replaceAll("ú", "u");
+        txt = txt.replaceAll("ù", "u");
         txt = txt.replaceAll("ü", "u");
+        txt = txt.replaceAll("ñ", "n");
         txt = txt.replaceAll("[^a-zA-Z0-9 ]", "");
         return txt;
     }
@@ -56,10 +66,12 @@ public class GameUtils {
         titleToCheck = normalizeText(titleToCheck);
         for (int i = 0; i < titleArray.length(); i++) {
             String realTitle = normalizeText(titleArray.getJSONObject(i).getString("value"));
-             Log.d("$$$COMPARATIVA$$$", "¿ " + titleToCheck + " == " + realTitle + " ?");
             if (realTitle.equals(titleToCheck)) {
+                Log.d("COMPARATIVA", "¿ '" + titleToCheck + "' == '" + realTitle + "' ?: Verdadero");
                 out = true;
                 break;
+            } else {
+                Log.d("COMPARATIVA", "¿ '" + titleToCheck + "' == '" + realTitle + "' ?: Falso");
             }
         }
         return out;

@@ -122,7 +122,10 @@
     "frame" : "frame12",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "300"}
+      {"lang" : "en", "value" : "300"},
+      {"lang" : "en", "value" : "Three hundred"},
+      {"lang" : "es", "value" : "300"},
+      {"lang" : "es", "value" : "Trescientos"}
     ]
   },
   {
