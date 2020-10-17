@@ -8,8 +8,8 @@ android {
         applicationId "net.a3do.app.moviepic"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 8
-        versionName "0.1.4"
+        versionCode 9
+        versionName "0.1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
