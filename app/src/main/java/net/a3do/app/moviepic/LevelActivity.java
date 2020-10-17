@@ -41,7 +41,7 @@ public class LevelActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
         hideTitleBar();
-        setContentView(R.layout.activity_level2);
+        setContentView(R.layout.activity_level);
 
         // Obtenemos la información del nivel desde el MainActivity
         Bundle bundle = getIntent().getExtras();
