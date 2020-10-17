@@ -47,6 +47,7 @@ class ViewPagerAdapter extends PagerAdapter {
         ImageView imageView = itemView.findViewById(R.id.imageViewMain);
         // setting the image in the imageView
         imageView.setImageBitmap(images[position]);
+        imageView.setContentDescription(context.getString(R.string.levelFrameDescription) + position);
         // Adding the View
         Objects.requireNonNull(container).addView(itemView);
         return itemView;

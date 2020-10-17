@@ -8,4 +8,5 @@
     <color name="lightBackground">#FFFFFFFF</color>
     <color name="lightBackgroundTransparent">#D9FFFFFF</color>
     <color name="textColor">#000000</color>
+    <color name="textHintColor">#323232</color>
 </resources>

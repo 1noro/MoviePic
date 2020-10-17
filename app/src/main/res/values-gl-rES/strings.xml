@@ -28,4 +28,5 @@
     <string name="levelNotAccesible2">no nivel anterior</string>
     <string name="textLevel4">Moderado</string>
     <string name="license">por Inoro\nGPL3 ou posterior</string>
+    <string name="levelFrameDescription">Fotograma número </string>
 </resources>

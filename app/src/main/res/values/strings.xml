@@ -29,4 +29,5 @@
     <string name="levelNotAccesible1">Match</string>
     <string name="levelNotAccesible2">in the previous level</string>
     <string name="license">by Inoro\nGPL3 or later</string>
+    <string name="levelFrameDescription">Frame number </string>
 </resources>
