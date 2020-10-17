@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/answerButtonDesc"
+        android:onClick="answerFAB"
+        android:src="@drawable/question"
+        app:backgroundTint="@color/red" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <EditText
+        android:id="@+id/titleAnswerBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_bg_transparent2"
+        android:hint="@string/noAnswer"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:paddingStart="20dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="9dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textHintColor"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/titleAnswered"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_bg_transparent2"
+        android:paddingStart="20dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="9dp"
+        android:text="@string/noAnswer"
+        android:textSize="28sp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:visibility="gone" />
+
+</RelativeLayout>
