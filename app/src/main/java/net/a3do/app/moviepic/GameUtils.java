@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +19,9 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class GameUtils {
 
@@ -157,6 +161,27 @@ public class GameUtils {
         progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
 //        progress.show();
         return progress;
+    }
+
+    public static void downloadLevelFrames(Context context, int levelId, int levelFileJSONId) throws IOException, JSONException {
+        JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(context, levelFileJSONId));
+
+        File cacheDir = new File(context.getCacheDir(), "level" + levelId);
+        boolean createdCacheLevelDir = cacheDir.mkdirs();
+        if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
+
+        ExecutorService es = Executors.newCachedThreadPool();
+        for (int i = 0; i < levelArray.length(); i++) {
+            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
+            es.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
+        }
+        es.shutdown();
+        try {
+            boolean finished = es.awaitTermination(10, TimeUnit.SECONDS);
+            if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

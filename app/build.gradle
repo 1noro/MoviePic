@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "net.a3do.app.moviepic"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 30
-        versionCode 12
-        versionName "0.2.0"
+        versionCode 14
+        versionName "0.2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

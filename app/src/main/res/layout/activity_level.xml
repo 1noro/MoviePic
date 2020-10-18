@@ -69,6 +69,7 @@
         android:paddingBottom="9dp"
         android:text="@string/noAnswer"
         android:textSize="28sp"
+        android:textColor="@color/textColor"
         android:marqueeRepeatLimit="marquee_forever"
         android:maxLines="1"
         android:visibility="gone" />

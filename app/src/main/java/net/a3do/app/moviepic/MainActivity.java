@@ -1,9 +1,6 @@
 package net.a3do.app.moviepic;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -15,17 +12,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int unlockNextLevel = 2;
-    private ProgressDialog loading;
+    private int unlockNextLevel = 20;
+//    private ProgressDialog loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
 
         // Creamos el dialogo de carga desde caché
-        loading = GameUtils.createLoading(this);
+//        loading = GameUtils.createLoading(this);
 
         try {
             setLevelButton(R.id.buttonLevel0, 0, R.raw.level0, "[]");
@@ -62,38 +55,52 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        loading.dismiss();
+//        loading.dismiss();
     }
 
-    public void downloadLevelFrames(int levelId, int levelFileJSONId) throws IOException, JSONException {
-        JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(this, levelFileJSONId));
-
-        File cacheDir = new File(this.getCacheDir(), "level" + levelId);
-        boolean createdCacheLevelDir = cacheDir.mkdirs();
-        if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
-
-        ExecutorService es = Executors.newCachedThreadPool();
-        for (int i = 0; i < levelArray.length(); i++) {
-            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
-            es.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
-        }
-        es.shutdown();
-        try {
-            boolean finished = es.awaitTermination(10, TimeUnit.SECONDS);
-            if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void downloadLevelFrames(int levelId, int levelFileJSONId) throws IOException, JSONException {
+//        JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(this, levelFileJSONId));
+//
+//        File cacheDir = new File(this.getCacheDir(), "level" + levelId);
+//        boolean createdCacheLevelDir = cacheDir.mkdirs();
+//        if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
+//
+//        ExecutorService es = Executors.newCachedThreadPool();
+//        for (int i = 0; i < levelArray.length(); i++) {
+//            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
+//            es.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
+//        }
+//        es.shutdown();
+//        try {
+//            boolean finished = es.awaitTermination(10, TimeUnit.SECONDS);
+//            if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public void executeIntent(int levelId, int levelFileJSONId) throws IOException, JSONException {
-        loading.show();
-        MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
+//        loading.show();
 
-        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-        intentLevel.putExtra("levelId", levelId);
-        intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
-        startActivity(intentLevel);
+//        new Thread(new Runnable() {
+//            public void run() {
+//                try {
+//                    MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//                loading.dismiss();
+//            }
+//        }).start();
+
+        LoadLevelThread loading = new LoadLevelThread("loading1", this, levelId, levelFileJSONId);
+        loading.start();
+
+
+//        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//        intentLevel.putExtra("levelId", levelId);
+//        intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
+//        startActivity(intentLevel);
     }
 
     public void setLevelButton(int buttonObjId, int levelId, int levelFileJSONId, String previousLevelIds) throws JSONException {

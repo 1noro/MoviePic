@@ -51,17 +51,15 @@ public class Level {
                 if (createdCacheLevelDir) Log.d("Carpeta creada", String.valueOf(cacheDir));
                 File imageFile = new File(cacheDir, filename);
                 Log.d("CARGA DESDE CACHE", imageFile + " cargada desde cache");
-                FileInputStream fileInputStream = null;
                 try {
-                    fileInputStream = new FileInputStream(imageFile);
+                    FileInputStream fileInputStream = new FileInputStream(imageFile);
                     imageBitmap = BitmapFactory.decodeStream(fileInputStream);
+                    fileInputStream.close();
                 } catch (FileNotFoundException e) {
                     Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
-                    e.printStackTrace();
+//                    e.printStackTrace();
                     imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
                 }
-                assert fileInputStream != null;
-                fileInputStream.close();
                 this.frameList[i] = imageBitmap;
             } catch (Exception e) {
                 Log.d("Excepción", "Fallo al obtener los frames desde internet o desde la cache.");
