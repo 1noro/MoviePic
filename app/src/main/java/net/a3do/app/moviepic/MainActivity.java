@@ -19,7 +19,8 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    ProgressDialog loading;
+    private int unlockNextLevel = 1;
+    private ProgressDialog loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,68 +51,74 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            parameters = new JSONObject("{\"levelId\" : 1, \"levelFileJSONId\" : " + R.raw.level1 + "}");
-            Button level1 = findViewById(R.id.buttonLevel1);
-            level1.setOnClickListener(new MyOnClickListener(parameters) {
-                @Override
-                public void onClick(View view) {
-                    try {
-                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus0.json"));
-                        if (previousLevelStatus.length() >= 20) {
-                            loading.show();
-                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                            startActivity(intentLevel);
-                        } else {
-                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
-                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (JSONException e) {e.printStackTrace();}
-                }
-            });
+//            parameters = new JSONObject("{\"levelId\" : 1, \"levelFileJSONId\" : " + R.raw.level1 + "}");
+//            Button level1 = findViewById(R.id.buttonLevel1);
+//            level1.setOnClickListener(new MyOnClickListener(parameters) {
+//                @Override
+//                public void onClick(View view) {
+//                    try {
+//                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus0.json"));
+//                        if (previousLevelStatus.length() >= 20) {
+//                            loading.show();
+//                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
+//                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
+//                            startActivity(intentLevel);
+//                        } else {
+//                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
+//                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                        }
+//                    } catch (JSONException e) {e.printStackTrace();}
+//                }
+//            });
 
-            parameters = new JSONObject("{\"levelId\" : 2, \"levelFileJSONId\" : " + R.raw.level2 + "}");
-            Button level2 = findViewById(R.id.buttonLevel2);
-            level2.setOnClickListener(new MyOnClickListener(parameters) {
-                @Override
-                public void onClick(View view) {
-                    try {
-                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus1.json"));
-                        if (previousLevelStatus.length() >= 20) {
-                            loading.show();
-                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                            startActivity(intentLevel);
-                        } else {
-                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
-                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (JSONException e) {e.printStackTrace();}
-                }
-            });
+            setLevelButton((Button) findViewById(R.id.buttonLevel1), 1, R.raw.level1, 0);
 
-            parameters = new JSONObject("{\"levelId\" : 3, \"levelFileJSONId\" : " + R.raw.level3 + "}");
-            Button level3 = findViewById(R.id.buttonLevel3);
-            level3.setOnClickListener(new MyOnClickListener(parameters) {
-                @Override
-                public void onClick(View view) {
-                    try {
-                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus1.json"));
-                        if (previousLevelStatus.length() >= 20) {
-                            loading.show();
-                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                            startActivity(intentLevel);
-                        } else {
-                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
-                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (JSONException e) {e.printStackTrace();}
-                }
-            });
+//            parameters = new JSONObject("{\"levelId\" : 2, \"levelFileJSONId\" : " + R.raw.level2 + "}");
+//            Button level2 = findViewById(R.id.buttonLevel2);
+//            level2.setOnClickListener(new MyOnClickListener(parameters) {
+//                @Override
+//                public void onClick(View view) {
+//                    try {
+//                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus1.json"));
+//                        if (previousLevelStatus.length() >= 20) {
+//                            loading.show();
+//                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
+//                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
+//                            startActivity(intentLevel);
+//                        } else {
+//                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
+//                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                        }
+//                    } catch (JSONException e) {e.printStackTrace();}
+//                }
+//            });
+
+            setLevelButton((Button) findViewById(R.id.buttonLevel2), 2, R.raw.level2, 1);
+
+//            parameters = new JSONObject("{\"levelId\" : 3, \"levelFileJSONId\" : " + R.raw.level3 + "}");
+//            Button level3 = findViewById(R.id.buttonLevel3);
+//            level3.setOnClickListener(new MyOnClickListener(parameters) {
+//                @Override
+//                public void onClick(View view) {
+//                    try {
+//                        JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus1.json"));
+//                        if (previousLevelStatus.length() >= 20) {
+//                            loading.show();
+//                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
+//                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
+//                            startActivity(intentLevel);
+//                        } else {
+//                            String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (20 - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
+//                            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                        }
+//                    } catch (JSONException e) {e.printStackTrace();}
+//                }
+//            });
+
+            setLevelButton((Button) findViewById(R.id.buttonLevel3), 3, R.raw.level3, 1);
 
             Button level4 = findViewById(R.id.buttonLevel4);
             level4.setOnClickListener(new View.OnClickListener() {
@@ -145,4 +152,28 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         loading.dismiss();
     }
+
+    public void setLevelButton(Button buttonObj, int levelId, int levelFileJSONId, int previousLevelId) throws JSONException {
+        JSONObject parameters = new JSONObject("{\"levelId\" : " + levelId + ", \"levelFileJSONId\" : " + levelFileJSONId + ", \"previousLevelId\" : " + previousLevelId + "}");
+        buttonObj.setOnClickListener(new MyOnClickListener(parameters) {
+            @Override
+            public void onClick(View view) {
+                int unlockNextLevel = MainActivity.this.unlockNextLevel;
+                try {
+                    JSONArray previousLevelStatus = new JSONArray(GameUtils.readLevelStatusFile(MainActivity.this, "levelStatus" + this.parameters.getInt("previousLevelId") + ".json"));
+                    if (previousLevelStatus.length() >= unlockNextLevel) {
+                        loading.show();
+                        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
+                        intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
+                        startActivity(intentLevel);
+                    } else {
+                        String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (unlockNextLevel - previousLevelStatus.length()) + " " + getResources().getString(R.string.levelNotAccesible2);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {e.printStackTrace();}
+            }
+        });
+    }
+
 }
