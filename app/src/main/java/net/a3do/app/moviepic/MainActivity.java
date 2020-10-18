@@ -25,9 +25,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Quitamos la barra del titulo
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(getSupportActionBar()).hide();
+        
+        // Mostramos el layout
         setContentView(R.layout.activity_main);
 
         // Mostrar el código del idioma al iniciar
@@ -36,51 +39,14 @@ public class MainActivity extends AppCompatActivity {
         loading = GameUtils.createLoading(this);
 
         try {
-//            JSONObject parameters = new JSONObject("{\"levelId\" : 0, \"levelFileJSONId\" : " + R.raw.level0 + "}");
-//            Button level0 = findViewById(R.id.buttonLevel0);
-//            level0.setOnClickListener(new MyOnClickListener(parameters) {
-//                @Override
-//                public void onClick(View view) {
-//                    try {
-//                        loading.show();
-//                        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-//                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-//                        intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-//                        startActivity(intentLevel);
-//                    } catch (JSONException e) {e.printStackTrace();}
-//                }
-//            });
-
             setLevelButton(R.id.buttonLevel0, 0, R.raw.level0, "[]");
             setLevelButton(R.id.buttonLevel1, 1, R.raw.level1, "[0]");
             setLevelButton(R.id.buttonLevel2, 2, R.raw.level2, "[1]");
             setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[1]");
             setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2, 3]");
-
-//            Button level4 = findViewById(R.id.buttonLevel4);
-//            level4.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Toast.makeText(MainActivity.this, getResources().getString(R.string.notImplementedYet), Toast.LENGTH_SHORT).show();
-//                }
-//            });
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        //View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        //int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        //decorView.setSystemUiVisibility(uiOptions);
-        // Remember that you should never show the action bar if the
-        // status bar is hidden, so hide that too if necessary.
-        //ActionBar actionBar = getActionBar();
-        //actionBar.hide();
     }
 
     @Override
