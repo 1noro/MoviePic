@@ -154,15 +154,6 @@ public class GameUtils {
 //        toast.show();
 //    }
 
-    public static ProgressDialog createLoading(Context context) {
-        ProgressDialog progress = new ProgressDialog(context);
-        progress.setTitle(context.getResources().getString(R.string.loading));
-        progress.setMessage(context.getResources().getString(R.string.loadingLevelMsg));
-        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
-//        progress.show();
-        return progress;
-    }
-
     public static void downloadLevelFrames(Context context, int levelId, int levelFileJSONId) throws IOException, JSONException {
         JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(context, levelFileJSONId));
 
