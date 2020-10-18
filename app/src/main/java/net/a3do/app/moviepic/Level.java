@@ -53,34 +53,33 @@ public class Level {
                 boolean createdCacheLevelDir = cacheDir.mkdirs();
                 if (createdCacheLevelDir) Log.d("Carpeta creada", String.valueOf(cacheDir));
                 File imageFile = new File(cacheDir, filename);
-                if (!imageFile.exists()) {
-                    Log.d("CARGA DESDE URL", imageFile + " cargada desde URL");
-                    URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
-                    try {
-                        imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
-                        FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
-                        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
-                        fileOutputStream.flush();
-                        fileOutputStream.close();
-                    } catch (FileNotFoundException|UnknownHostException e) {
-                        Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
-                        e.printStackTrace();
-                        imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
-                    }
-                } else {
-                    Log.d("CARGA DESDE CACHE", imageFile + " cargada desde cache");
-                    FileInputStream fileInputStream = null;
-                    try {
-                        fileInputStream = new FileInputStream(imageFile);
-                        imageBitmap = BitmapFactory.decodeStream(fileInputStream);
-                    } catch (FileNotFoundException e) {
-                        Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
-                        e.printStackTrace();
-                        imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
-                    }
-                    assert fileInputStream != null;
-                    fileInputStream.close();
+//                if (!imageFile.exists()) {
+//                    Log.d("CARGA DESDE URL", imageFile + " cargada desde URL");
+//                    URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
+//                    try {
+//                        imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+//                        FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
+//                        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+//                        fileOutputStream.flush();
+//                        fileOutputStream.close();
+//                    } catch (FileNotFoundException|UnknownHostException e) {
+//                        Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la URL por algún motivo, asignando la imagen 404.");
+//                        e.printStackTrace();
+//                        imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
+//                    }
+//                } else {
+                Log.d("CARGA DESDE CACHE", imageFile + " cargada desde cache");
+                FileInputStream fileInputStream = null;
+                try {
+                    fileInputStream = new FileInputStream(imageFile);
+                    imageBitmap = BitmapFactory.decodeStream(fileInputStream);
+                } catch (FileNotFoundException e) {
+                    Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la CACHÉ por algún motivo, asignando la imagen 404.");
+                    e.printStackTrace();
+                    imageBitmap = BitmapFactory.decodeResource(this.context.getResources(), R.drawable.frame_error404);
                 }
+                assert fileInputStream != null;
+                fileInputStream.close();
                 this.frameList[i] = imageBitmap;
             } catch (Exception e) {
                 Log.d("Excepción", "Fallo al obtener los frames desde internet o desde la cache.");

@@ -37,8 +37,8 @@ public class LevelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // para que android permita cargas desde webs en el main thread
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
+//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+//        StrictMode.setThreadPolicy(policy);
 
         hideTitleBar();
         setContentView(R.layout.activity_level);

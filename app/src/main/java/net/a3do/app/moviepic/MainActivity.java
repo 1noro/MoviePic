@@ -2,7 +2,10 @@ package net.a3do.app.moviepic;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -15,6 +18,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,10 +35,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // para que android permita cargas desde webs en el main thread
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         // Quitamos la barra del titulo
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(getSupportActionBar()).hide();
-        
+
         // Mostramos el layout
         setContentView(R.layout.activity_main);
 
@@ -55,6 +68,43 @@ public class MainActivity extends AppCompatActivity {
         loading.dismiss();
     }
 
+    public void downloadLevelFrames(int levelId, int levelFileJSONId) throws IOException, JSONException {
+        Log.d("PASO", "PASO POR AQUI -----------------------------------------------");
+        JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(this, levelFileJSONId));
+        for (int i = 0; i < levelArray.length(); i++) {
+            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
+            Bitmap imageBitmap;
+            File cacheDir = new File(this.getCacheDir(), "level" + levelId);
+            boolean createdCacheLevelDir = cacheDir.mkdirs();
+            if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
+            File imageFile = new File(cacheDir, filename);
+            if (!imageFile.exists()) {
+                Log.d("CARGA DESDE URL", imageFile + " cargada desde URL");
+                URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
+                try {
+                    imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                    FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
+                    imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                    fileOutputStream.flush();
+                    fileOutputStream.close();
+                } catch (FileNotFoundException | UnknownHostException e) {
+                    Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la URL por algún motivo.");
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void executeIntent(int levelId, int levelFileJSONId) throws IOException, JSONException {
+        loading.show();
+        MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
+
+        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+        intentLevel.putExtra("levelId", levelId);
+        intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
+        startActivity(intentLevel);
+    }
+
     public void setLevelButton(int buttonObjId, int levelId, int levelFileJSONId, String previousLevelIds) throws JSONException {
         Button buttonObj = findViewById(buttonObjId);
         JSONObject parameters = new JSONObject("{\"levelId\" : " + levelId + ", \"levelFileJSONId\" : " + levelFileJSONId + ", \"previousLevelIds\" : " + previousLevelIds + "}");
@@ -71,23 +121,35 @@ public class MainActivity extends AppCompatActivity {
                             previousCorrectAnswers += previousLevelStatus.length();
                         }
                         if (previousCorrectAnswers >= unlockNextLevel) {
-                            loading.show();
-                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                            intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                            intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                            startActivity(intentLevel);
+//                            int levelId = this.parameters.getInt("levelId");
+//                            int levelFileJSONId = this.parameters.getInt("levelFileJSONId");
+//
+//                            loading.show();
+//                            MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
+//
+//                            Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//                            intentLevel.putExtra("levelId", levelId);
+//                            intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
+//                            startActivity(intentLevel);
+                            MainActivity.this.executeIntent(this.parameters.getInt("levelId"), this.parameters.getInt("levelFileJSONId"));
                         } else {
                             String msg = getResources().getString(R.string.levelNotAccesible1) + " " + (unlockNextLevel - previousCorrectAnswers) + " " + getResources().getString(R.string.levelNotAccesible2);
                             Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        loading.show();
-                        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
-                        intentLevel.putExtra("levelId", this.parameters.getInt("levelId"));
-                        intentLevel.putExtra("levelItemJsonId", this.parameters.getInt("levelFileJSONId"));
-                        startActivity(intentLevel);
+//                        int levelId = this.parameters.getInt("levelId");
+//                        int levelFileJSONId = this.parameters.getInt("levelFileJSONId");
+//
+//                        loading.show();
+//                        MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
+//
+//                        Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
+//                        intentLevel.putExtra("levelId", levelId);
+//                        intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
+//                        startActivity(intentLevel);
+                        MainActivity.this.executeIntent(this.parameters.getInt("levelId"), this.parameters.getInt("levelFileJSONId"));
                     }
-                } catch (JSONException e) {e.printStackTrace();}
+                } catch (JSONException|IOException e) {e.printStackTrace();}
             }
         });
     }
