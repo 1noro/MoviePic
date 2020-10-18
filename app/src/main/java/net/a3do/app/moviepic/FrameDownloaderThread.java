@@ -14,18 +14,16 @@ import java.net.UnknownHostException;
 
 public class FrameDownloaderThread extends Thread {
 
-    private int levelId;
     private File cacheDir;
     private String filename;
     private URL imageurl;
 
     FrameDownloaderThread(String name, int levelId, File cacheDir, String filename) {
         super(name);
-        this.levelId = levelId;
         this.cacheDir = cacheDir;
         this.filename = filename;
         try {
-            this.imageurl = new URL("https://storage.rat.la/moviepic/level" + this.levelId + "/" + this.filename);
+            this.imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + this.filename);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

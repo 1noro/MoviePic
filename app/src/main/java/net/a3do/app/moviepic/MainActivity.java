@@ -2,8 +2,6 @@ package net.a3do.app.moviepic;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,11 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URL;
-import java.net.UnknownHostException;
 import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -51,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Mostrar el código del idioma al iniciar
 //        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
 
+        // Creamos el dialogo de carga desde caché
         loading = GameUtils.createLoading(this);
 
         try {
@@ -71,32 +66,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void downloadLevelFrames(int levelId, int levelFileJSONId) throws IOException, JSONException {
-        JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(this, levelFileJSONId));
-        for (int i = 0; i < levelArray.length(); i++) {
-            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
-            Bitmap imageBitmap;
-            File cacheDir = new File(this.getCacheDir(), "level" + levelId);
-            boolean createdCacheLevelDir = cacheDir.mkdirs();
-            if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
-            File imageFile = new File(cacheDir, filename);
-            if (!imageFile.exists()) {
-                Log.d("CARGA DESDE URL", imageFile + " cargada desde URL");
-                URL imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + filename);
-                try {
-                    imageBitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
-                    FileOutputStream fileOutputStream = new FileOutputStream(imageFile);
-                    imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
-                    fileOutputStream.flush();
-                    fileOutputStream.close();
-                } catch (FileNotFoundException | UnknownHostException e) {
-                    Log.d("FileNotFoundException", "La imagen no se ha podido cargar desde la URL por algún motivo.");
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public void downloadLevelFrames2(int levelId, int levelFileJSONId) throws IOException, JSONException {
         JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(this, levelFileJSONId));
 
         File cacheDir = new File(this.getCacheDir(), "level" + levelId);
@@ -119,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void executeIntent(int levelId, int levelFileJSONId) throws IOException, JSONException {
         loading.show();
-        MainActivity.this.downloadLevelFrames2(levelId, levelFileJSONId);
+        MainActivity.this.downloadLevelFrames(levelId, levelFileJSONId);
 
         Intent intentLevel = new Intent(getApplicationContext(), LevelActivity.class);
         intentLevel.putExtra("levelId", levelId);

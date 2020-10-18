@@ -3,7 +3,6 @@ package net.a3do.app.moviepic;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -35,10 +34,6 @@ public class LevelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
-        // para que android permita cargas desde webs en el main thread
-//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//        StrictMode.setThreadPolicy(policy);
 
         hideTitleBar();
         setContentView(R.layout.activity_level);
