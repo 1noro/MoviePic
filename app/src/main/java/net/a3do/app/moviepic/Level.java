@@ -77,7 +77,7 @@ public class Level {
         boolean out = false;
         if (GameUtils.checkTitle(levelArray.getJSONObject(mViewPager.getCurrentItem()).getJSONArray("title"), titleToCheck)) {
             levelStatusArray.put(mViewPager.getCurrentItem());
-            GameUtils.writeToFile(context, this.fileStatusDir, levelStatusArray.toString());
+            GameUtils.writeStringToFile(context, this.fileStatusDir, levelStatusArray.toString());
             out = true;
         }
         return out;

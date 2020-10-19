@@ -1,16 +1,18 @@
 package net.a3do.app.moviepic;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,6 +21,7 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -40,6 +43,70 @@ public class GameUtils {
             is.close();
         }
         return writer.toString();
+    }
+
+    public static String readStringFromInputStream(InputStream inputStream) throws IOException {
+        Writer writer = new StringWriter();
+        char[] buffer = new char[1024];
+        try {
+            Reader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                writer.write(buffer, 0, n);
+            }
+        } finally {
+            inputStream.close();
+        }
+        return writer.toString();
+    }
+
+    public static JSONObject readAppPreferences(@NotNull Context context, String defaultPreferences) throws JSONException {
+        JSONObject out = null;
+        File preferencesFile = new File(context.getFilesDir(), "preferences.json");
+        try {
+            FileInputStream fileInputStream = new FileInputStream(preferencesFile);
+            out = new JSONObject(readStringFromInputStream(fileInputStream));
+        } catch (FileNotFoundException e) {
+            Log.d("FileNotFoundException", "No existe preferences.json, guardadndo uno por defecto.");
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(preferencesFile);
+                fileOutputStream.write(defaultPreferences.getBytes());
+                fileOutputStream.flush();
+                fileOutputStream.close();
+            } catch (IOException ex) {
+                Log.d("IOException", "El archivo preferences.json no se ha podido guardar con los valores por defecto.");
+                ex.printStackTrace();
+            }
+            out = new JSONObject(defaultPreferences);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return out;
+    }
+
+    public static void saveAppPreferences(Context context, JSONObject newPreferences) {
+        File preferencesFile = new File(context.getFilesDir(), "preferences.json");
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(preferencesFile);
+            fileOutputStream.write(newPreferences.toString().getBytes());
+            fileOutputStream.flush();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            Log.d("IOException", "El archivo preferences.json no se ha podido guardar con los nuevos valores.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void resetAllLevelStatus(Context context) {
+        File dir = context.getFilesDir();
+        for ( File file : Objects.requireNonNull(dir.listFiles())) {
+            // levelStatusN.json
+            Log.d("COMPARATIVA", file.getName() + ": ¿ '" + file.getName().substring(0, 11) + "' == 'levelStatus' ?");
+            if (file.isFile() && file.getName().substring(0, 11).equals("levelStatus")) {
+                boolean result = file.delete();
+                if (result) {Log.d("Archivo eliminado", file.getAbsolutePath());}
+            }
+        }
     }
 
     public static String normalizeText(String txt) {
@@ -126,7 +193,7 @@ public class GameUtils {
         }
     }
 
-    public static void writeToFile(@NotNull Context context, String fileDir, String data) {
+    public static void writeStringToFile(@NotNull Context context, String fileDir, String data) {
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileDir, Context.MODE_PRIVATE));
             outputStreamWriter.write(data);

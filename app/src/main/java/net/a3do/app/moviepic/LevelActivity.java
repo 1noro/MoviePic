@@ -25,10 +25,10 @@ import java.util.Objects;
 
 public class LevelActivity extends AppCompatActivity {
 
-    Level levelObj;
-    ViewPager mViewPager;
-    EditText titleAnswerBox;
-    TextView titleAnswered;
+    private Level levelObj;
+    private ViewPager mViewPager;
+    private EditText titleAnswerBox;
+    private TextView titleAnswered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
