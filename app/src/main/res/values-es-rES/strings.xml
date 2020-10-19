@@ -9,7 +9,7 @@
     <string name="textLevel1">Básico</string>
     <string name="textLevel2">B &amp; N</string>
     <string name="textLevel3">2019</string>
-    <string name="textLevel4">Moderado</string>
+    <string name="textLevel4">Doado</string>
 
     <string name="help1">Adivina el título completo de la película basándote en el fotograma mostrado.</string>
     <string name="help2">No es necesario introducir ni acentos ni signos de puntuación en la respuesta.</string>
