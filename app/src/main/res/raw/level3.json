@@ -1,229 +1,217 @@
 [
   {
-    "frame": "frame91",
-    "lang": "ko",
-    "title": [
-      {"lang": "en", "value": "Parasite"},
-      {"lang": "es","value": "Parásitos"},
-      {"lang": "ko","value": "Gisaengchung"}
+    "frame" : "frame63",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Psycho"},
+      {"lang" : "es", "value" : "Psicosis"}
     ]
   },{
-    "frame": "frame92",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Once Upon a Time in... Hollywood"},
-      {"lang": "en", "value": "Once Upon a Time in Hollywood"},
-      {"lang": "es","value": "Érase una vez en... Hollywood"},
-      {"lang": "es","value": "Érase una vez en Hollywood"}
+    "frame" : "frame64",
+    "lang" : "sv",
+    "title" : [
+      {"lang" : "en", "value" : "The Seventh Seal"},
+      {"lang" : "es", "value" : "El séptimo sello"},
+      {"lang" : "sv", "value" : "Det sjunde inseglet"}
     ]
   },{
-    "frame": "frame93",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "The Irishman"},
-      {"lang": "es","value": "El irlandés"}
+    "frame" : "frame65",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "A Night at the Opera"},
+      {"lang" : "es", "value" : "Una noche en la ópera"}
     ]
   },{
-    "frame": "frame94",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Avengers: Endgame"},
-      {"lang": "en", "value": "Avengers 4"},
-      {"lang": "es","value": "Vengadores: Endgame"},
-      {"lang": "es","value": "Vengadores 4"}
+    "frame" : "frame66",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "The 400 Blows"},
+      {"lang" : "en", "value" : "The four hundred Blows"},
+      {"lang" : "es", "value" : "Los cuatrocientos golpes (Los 400 golpes)"},
+      {"lang" : "es", "value" : "Los 400 golpes"},
+      {"lang" : "es", "value" : "Los cuatrocientos golpes"},
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups (Les 400 Coups)"},
+      {"lang" : "fr", "value" : "Les 400 Coups"},
+      {"lang" : "fr", "value" : "Les Quatre Cents Coups"}
     ]
   },{
-    "frame": "frame95",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "1917"}
+    "frame" : "frame67",
+    "lang" : "es",
+    "title" : [
+      {"lang" : "es", "value" : "Atraco a las tres"},
+      {"lang" : "es", "value" : "Atraco a las 3"}
     ]
   },{
-    "frame": "frame96",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Marriage Story"},
-      {"lang": "es","value": "Historia de un matrimonio"}
+    "frame" : "frame68",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Casablanca"}
     ]
   },{
-    "frame": "frame97",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Star Wars: Episode IX - The Rise of Skywalker"},
-      {"lang": "en", "value": "Star Wars: Episode 9 - The Rise of Skywalker"},
-      {"lang": "en", "value": "Star Wars: Episode 9"},
-      {"lang": "en", "value": "Star Wars 9"},
-      {"lang": "en", "value": "Star Wars: The Rise of Skywalker"},
-      {"lang": "en", "value": "The Rise of Skywalker"},
-      {"lang": "es","value": "Star Wars: Episodio IX - El ascenso de Skywalker"},
-      {"lang": "es","value": "Star Wars: Episodio 9 - El ascenso de Skywalker"},
-      {"lang": "es","value": "Star Wars: Episodio 9"},
-      {"lang": "es","value": "Star Wars: El ascenso de Skywalker"},
-      {"lang": "es","value": "El ascenso de Skywalker"}
+    "frame" : "frame69",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "One, Two, Three"},
+      {"lang" : "es", "value" : "Uno, dos, tres"},
+      {"lang" : "es", "value" : "Un, dos, tres"}
     ]
   },{
-    "frame": "frame98",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Ad Astra"}
+    "frame" : "frame70",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "It's a Wonderful Life"},
+      {"lang" : "es", "value" : "Qué bello es vivir"}
     ]
   },{
-    "frame": "frame99",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Ford v. Ferrari"},
-      {"lang": "en", "value": "Le Mans '66"},
-      {"lang": "en", "value": "Ford v. Ferrari, Le Mans '66"}
+    "frame" : "frame71",
+    "lang" : "jp",
+    "title" : [
+      {"lang" : "jp", "value" : "Harakiri (Seppuku)"},
+      {"lang" : "jp", "value" : "Harakiri"},
+      {"lang" : "jp", "value" : "Seppuku"}
     ]
   },{
-    "frame": "frame100",
-    "lang": "es",
-    "title": [
-      {"lang": "en", "value": "Pain and Glory"},
-      {"lang": "es", "value": "Dolor y gloria"}
+    "frame" : "frame72",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "To Kill a Mockingbird"},
+      {"lang" : "es", "value" : "Matar a un ruiseñor"},
+      {"lang" : "es", "value" : "Matar un ruiseñor"}
     ]
   },{
-    "frame": "frame101",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "The Lighthouse"},
-      {"lang": "es", "value": "El faro"}
+    "frame" : "frame73",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Paths of Glory"},
+      {"lang" : "es", "value" : "Senderos de gloria"}
     ]
   },{
-    "frame": "frame102",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Knives Out"},
-      {"lang": "es", "value": "Puñales por la espalda (Knives Out)"},
-      {"lang": "es", "value": "Puñales por la espalda"}
+    "frame" : "frame74",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Sunrise: A Song of Two Humans"},
+      {"lang" : "en", "value" : "Sunrise"},
+      {"lang" : "en", "value" : "A Song of Two Humans"},
+      {"lang" : "es", "value" : "Amanecer"}
     ]
   },{
-    "frame": "frame103",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Midsommar"}
+    "frame" : "frame75",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Man Who Shot Liberty Valance"},
+      {"lang" : "es", "value" : "El hombre que mató a Liberty Valance"}
     ]
   },{
-    "frame": "frame104",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Jojo Rabbit"}
+    "frame" : "frame76",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "es", "value" : "M, el vampiro de Düsseldorf"},
+      {"lang" : "de", "value" : "M"},
+      {"lang" : "de", "value" : "M - Eine Stadt sucht einen Mörder"}
     ]
   },{
-    "frame": "frame120",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Aladdin"},
-      {"lang": "es", "value": "Aladdín"}
+    "frame" : "frame77",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Great Dictator"},
+      {"lang" : "es", "value" : "El gran dictador"}
     ]
   },{
-    "frame": "frame105",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Little Women"},
-      {"lang": "es", "value": "Mujercitas"}
+    "frame" : "frame78",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "it", "value" : "La dolce vita"}
     ]
   },{
-    "frame": "frame107",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Pokémon Detective Pikachu"},
-      {"lang": "en", "value": "Detective Pikachu"},
-      {"lang": "es", "value": "Pokémon Detective Pikachu"}
+    "frame" : "frame79",
+    "lang" : "jp",
+    "title" : [
+      {"lang" : "jp", "value" : "Rashomon"}
     ]
   },{
-    "frame": "frame108",
-    "lang": "es",
-    "title": [
-      {"lang": "en", "value": "While at War"},
-      {"lang": "es", "value": "Mientras dure la guerra"}
+    "frame" : "frame80",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "All About Eve"},
+      {"lang" : "es", "value" : "Eva al desnudo"}
     ]
   },{
-    "frame": "frame109",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Richard Jewell"},
-      {"lang": "en", "value": "The Ballad of Richard Jewell"},
-      {"lang": "en", "value": "Ricardo el joyas"}
+    "frame" : "frame81",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "Bicycle Thieves"},
+      {"lang" : "es", "value" : "Ladrón de bicicletas"},
+      {"lang" : "it", "value" : "Ladri di biciclette"}
     ]
   },{
-    "frame": "frame110",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Cats"}
+    "frame" : "frame82",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "The Passion of Joan of Arc"},
+      {"lang" : "es", "value" : "La pasión de Juana de Arco"},
+      {"lang" : "fr", "value" : "La Passion de Jeanne d'Arc"}
     ]
   },{
-    "frame": "frame111",
-    "lang": "gl",
-    "title": [
-      {"lang": "en", "value": "Fire Will Come"},
-      {"lang": "es", "value": "Lo que arde"},
-      {"lang": "gl", "value": "O que arde"}
+    "frame" : "frame83",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Freaks"},
+      {"lang" : "es", "value" : "La parada de los monstruos"},
+      {"lang" : "es", "value" : "Freaks, la parada de los monstruos"}
     ]
   },{
-    "frame": "frame112",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Bombshell"},
-      {"lang": "es", "value": "El escándalo"}
+    "frame" : "frame84",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Touch of Evil"},
+      {"lang" : "es", "value" : "Sed de mal"}
     ]
   },{
-    "frame": "frame113",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Glass"},
-      {"lang": "es", "value": "Glass (Cristal)"},
-      {"lang": "es", "value": "Cristal"}
+    "frame" : "frame85",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "Rome, Open City"},
+      {"lang" : "en", "value" : "Open City"},
+      {"lang" : "es", "value" : "Roma, ciudad abierta"},
+      {"lang" : "it", "value" : "Roma città aperta"}
     ]
   },{
-    "frame": "frame114",
-    "lang": "es",
-    "title": [
-      {"lang": "es", "value": "Klaus"}
+    "frame" : "frame86",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Bringing Up Baby"},
+      {"lang" : "es", "value" : "La fiera de mi niña"}
     ]
   },{
-    "frame": "frame115",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Doctor Sleep"},
-      {"lang": "es", "value": "Doctor Sueño"}
+    "frame" : "frame87",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Judgment at Nuremberg"},
+      {"lang" : "es", "value" : "¿Vencedores o vencidos? (El juicio de Nuremberg)"},
+      {"lang" : "es", "value" : "¿Vencedores o vencidos?"},
+      {"lang" : "es", "value" : "El juicio de Nuremberg"}
     ]
   },{
-    "frame": "frame116",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Toy Story 4"}
+    "frame" : "frame88",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The General"},
+      {"lang" : "es", "value" : "El maquinista de La General"}
     ]
   },{
-    "frame": "frame117",
-    "lang": "fr",
-    "title": [
-      {"lang": "en", "value": "Portrait of a Lady on Fire"},
-      {"lang": "es", "value": "Retrato de una mujer en llamas"},
-      {"lang": "fr", "value": "Portrait de la jeune fille en feu"}
+    "frame" : "frame89",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "Breathless"},
+      {"lang" : "es", "value" : "Al final de la escapada"},
+      {"lang" : "fr", "value" : "À bout de souffle"}
     ]
   },{
-    "frame": "frame118",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "Alita, Battle Angel"},
-      {"lang": "en", "value": "Battle Angel, Alita"},
-      {"lang": "es", "value": "Alita: Ángel de combate"},
-      {"lang": "es", "value": "Ángel de combate, Alita"}
-    ]
-  },{
-    "frame": "frame119",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "The Lion King"},
-      {"lang": "es", "value": "El rey león"}
-    ]
-  },{
-    "frame": "frame106",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "A Rainy Day in New York"},
-      {"lang": "es", "value": "Día de lluvia en Nueva York"}
+    "frame" : "frame90",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Captains Courageous"},
+      {"lang" : "es", "value" : "Capitanes intrépidos"}
     ]
   }
 ]

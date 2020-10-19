@@ -1,6 +1,8 @@
 package net.a3do.app.moviepic;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 
 import org.jetbrains.annotations.NotNull;
@@ -27,6 +29,19 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class GameUtils {
+
+    public static void showResetProgressAlert(Context context) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+        alertDialog.setTitle("¡Cambio importante!");
+        alertDialog.setMessage("Lo sentimos mucho. Nos vemos en la necesidad de reiniciar tu progreso, ya que la disposición de los niveles ha cambiado.");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Aceptar",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
 
     @NotNull
     public static String readJsonFile(@NotNull Context context, int id) throws IOException {
@@ -73,6 +88,8 @@ public class GameUtils {
                 fileOutputStream.write(defaultPreferences.getBytes());
                 fileOutputStream.flush();
                 fileOutputStream.close();
+//                GameUtils.resetAllLevelStatus(context);
+//                GameUtils.showResetProgressAlert(context);
             } catch (IOException ex) {
                 Log.d("IOException", "El archivo preferences.json no se ha podido guardar con los valores por defecto.");
                 ex.printStackTrace();

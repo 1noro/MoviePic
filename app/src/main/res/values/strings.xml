@@ -6,11 +6,12 @@
     <string name="loadingLevelMsg">Getting frames…</string>
 
     <string name="textLevelToDefine" translatable="false">¿?</string>
-    <string name="textLevel0">Essential</string>
-    <string name="textLevel1">Basic</string>
-    <string name="textLevel2">B &amp; W</string>
-    <string name="textLevel3">2019</string>
-    <string name="textLevel4">Easy</string>
+    <string name="textLevel0">Easy</string>
+    <string name="textLevel1">Essential</string>
+    <string name="textLevel2">Basic</string>
+    <string name="textLevel3">B &amp; W</string>
+    <string name="textLevel4">2019</string>
+    <string name="textLevel5">Easy</string>
 
     <string name="help1"> Guess the full movie title based on the displayed frame. </string>
     <string name="help2"> It is not necessary to enter accents or punctuation marks in the answer. </string>

@@ -1,7 +1,5 @@
 package net.a3do.app.moviepic;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        int levelConfigVersion = 1;
+        int levelConfigVersion = 2;
         String defaultPreferences = "{\"levelConfigVersion\" : " + levelConfigVersion + "}";
 
         super.onCreate(savedInstanceState);
@@ -41,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             setLevelButton(R.id.buttonLevel0, 0, R.raw.level0, "[]");
             setLevelButton(R.id.buttonLevel1, 1, R.raw.level1, "[0]");
             setLevelButton(R.id.buttonLevel2, 2, R.raw.level2, "[1]");
-            setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[1]");
-            setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2, 3]");
+            setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[2]");
+            setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2]");
 
             JSONObject preferences = GameUtils.readAppPreferences(this, defaultPreferences);
             // si ha cambiado la disposición de los niveles, se borra el progreso
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 preferences.remove("levelConfigVersion");
                 preferences.put("levelConfigVersion", levelConfigVersion);
                 GameUtils.saveAppPreferences(this, preferences);
-                showResetProgressAlert();
+                GameUtils.showResetProgressAlert(this);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -62,19 +60,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    public void showResetProgressAlert() {
-        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialog.setTitle("¡Cambio importante!");
-        alertDialog.setMessage("Lo sentimos mucho. Nos vemos en la necesidad de reiniciar tu progreso, ya que la disposición de los niveles ha cambiado.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Aceptar",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertDialog.show();
     }
 
     public void downloadAndLoadLevel(int levelId, int levelFileJSONId) {

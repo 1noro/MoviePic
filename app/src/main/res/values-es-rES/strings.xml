@@ -5,11 +5,11 @@
     <string name="loading">Cargando</string>
     <string name="loadingLevelMsg">Obteniendo fotogramas…</string>
 
-    <string name="textLevel0">Esencial</string>
-    <string name="textLevel1">Básico</string>
-    <string name="textLevel2">B &amp; N</string>
-    <string name="textLevel3">2019</string>
-    <string name="textLevel4">Doado</string>
+    <string name="textLevel0">Doado</string>
+    <string name="textLevel1">Esencial</string>
+    <string name="textLevel2">Básico</string>
+    <string name="textLevel3">B &amp; N</string>
+    <string name="textLevel4">2019</string>
 
     <string name="help1">Adivina el título completo de la película basándote en el fotograma mostrado.</string>
     <string name="help2">No es necesario introducir ni acentos ni signos de puntuación en la respuesta.</string>
@@ -29,4 +29,5 @@
     <string name="levelNotAccesible2">en el nivel anterior</string>
     <string name="license">por Inoro\nGPL3 o posterior</string>
     <string name="levelFrameDescription">Fotograma número </string>
+    <string name="textLevel5">Doado</string>
 </resources>

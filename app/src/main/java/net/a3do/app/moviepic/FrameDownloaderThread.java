@@ -23,7 +23,7 @@ public class FrameDownloaderThread extends Thread {
         this.cacheDir = cacheDir;
         this.filename = filename;
         try {
-            this.imageurl = new URL("https://storage.rat.la/moviepic/level" + levelId + "/" + this.filename);
+            this.imageurl = new URL("https://storage.rat.la/moviepic/v2/level" + levelId + "/" + this.filename);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

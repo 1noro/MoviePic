@@ -1,273 +1,235 @@
 [
   {
-    "frame" : "frame1",
-    "lang" : "de",
-    "title" : [
-      {"lang" : "en", "value" : "The Cabinet of Droctor Caligari"},
-      {"lang" : "en", "value" : "The Cabinet of Dr. Caligari"},
-      {"lang" : "es", "value" : "El gabinete del Doctor Caligari"},
-      {"lang" : "es", "value" : "El gabinete del Dr. Caligari"},
-      {"lang" : "de", "value" : "Das Kabinett des Dr. Caligari"}
+    "frame": "frame121",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "2001: A Space Odyssey"},
+      {"lang": "es","value": "2001: Una odisea del espacio"},
+      {"lang": "es","value": "2001: Una odisea en el espacio"}
     ]
-  },
-  {
-    "frame" : "frame6",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Avatar"}
+  },{
+    "frame": "frame122",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Harry Potter and the Prisoner of Azkaban"},
+      {"lang": "en", "value": "Harry Potter 3 and the Prisoner of Azkaban"},
+      {"lang": "en", "value": "Harry Potter 3"},
+      {"lang": "es","value": "Harry Potter y el prisionero de Azkaban"},
+      {"lang": "es","value": "Harry Potter 3 y el prisionero de Azkaban"}
     ]
-  },
-  {
-    "frame" : "frame2",
-    "lang" : "ja",
-    "title" : [
-      {"lang" : "ja", "value" : "Akira"}
+  },{
+    "frame": "frame123",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Dead Poets Society"},
+      {"lang": "es","value": "El club de los poetas muertos"}
     ]
-  },
-  {
-    "frame" : "frame11",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Braveheart"}
+  },{
+    "frame": "frame124",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Donnie Darko"}
     ]
-  },
-  {
-    "frame" : "frame5",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "War of the Worlds"},
-      {"lang" : "es", "value" : "La guerra de los mundos"}
+  },{
+    "frame": "frame125",
+    "lang": "jp",
+    "title": [
+      {"lang": "en", "value": "Princess Mononoke"},
+      {"lang": "es", "value": "La princesa Mononoke"},
+      {"lang": "jp", "value": "Mononoke-hime"},
+      {"lang": "jp", "value": "Mononoke hime"}
     ]
-  },
-  {
-    "frame" : "frame10",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Social Network"},
-      {"lang" : "es", "value" : "La red social"}
+  },{
+    "frame": "frame126",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "The Godfather"},
+      {"lang": "es", "value": "El padrino"}
     ]
-  },
-  {
-    "frame" : "frame8",
-    "lang" : "it",
-    "title" : [
-      {"lang" : "en", "value" : "For a Few Dollars More"},
-      {"lang" : "es", "value" : "La muerte tenía un precio"},
-      {"lang" : "it", "value" : "Per qualche dollaro in più"}
+  },{
+    "frame": "frame127",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Monty Python's Life of Brian"},
+      {"lang": "en", "value": "Monty Python Life of Brian"},
+      {"lang": "en", "value": "Life of Brian"},
+      {"lang": "es", "value": "La vida de Brian"}
     ]
-  },
-  {
-    "frame" : "frame9",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Interstellar"}
+  },{
+    "frame": "frame128",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Spider-Man (Spiderman)"},
+      {"lang": "en", "value": "Spider-Man"},
+      {"lang": "en", "value": "Spider-Man 1"}
     ]
-  },
-  {
-    "frame" : "frame13",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Citizen Kane"},
-      {"lang" : "es", "value" : "Ciudadano Kane"}
+  },{
+    "frame": "frame129",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Gladiator"}
     ]
-  },
-  {
-    "frame" : "frame14",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Wolf of Wall Street"},
-      {"lang" : "es", "value" : "El lobo de Wall Street"}
+  },{
+    "frame": "frame130",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Inglourious Basterds"},
+      {"lang": "es", "value": "Malditos bastardos"}
     ]
-  },
-  {
-    "frame" : "frame15",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Shining"},
-      {"lang" : "es", "value" : "El resplandor"}
+  },{
+    "frame": "frame131",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Cry Baby"},
+      {"lang": "es", "value": "Cry Baby (El lágrima)"},
+      {"lang": "es", "value": "El lágrima"}
     ]
-  },
-  {
-    "frame" : "frame16",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Matrix"},
-      {"lang" : "es", "value" : "Matrix"}
+  },{
+    "frame": "frame132",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Back to the Future"},
+      {"lang": "es", "value": "Regreso al futuro"}
     ]
-  },
-  {
-    "frame" : "frame17",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "There Will Be Blood"},
-      {"lang" : "es", "value" : "Pozos de ambición"}
+  },{
+    "frame": "frame133",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Troy"},
+      {"lang": "es", "value": "Troya"}
     ]
-  },
-  {
-    "frame" : "frame18",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Grand Budapest Hotel"},
-      {"lang" : "es", "value" : "El Gran Hotel Budapest"}
+  },{
+    "frame": "frame134",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Singin' in the Rain"},
+      {"lang": "es", "value": "Cantando bajo la lluvia"}
     ]
-  },
-  {
-    "frame" : "frame19",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Blade Runner"}
+  },{
+    "frame": "frame135",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Mulan"}
     ]
-  },
-  {
-    "frame" : "frame12",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "300"},
-      {"lang" : "en", "value" : "Three hundred"},
-      {"lang" : "es", "value" : "300"},
-      {"lang" : "es", "value" : "Trescientos"}
+  },{
+    "frame": "frame136",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Jurassic Park"},
+      {"lang": "es", "value": "Parque Jurásico (Jurassic Park)"},
+      {"lang": "es", "value": "Jurassic Park (Parque Jurásico)"},
+      {"lang": "es", "value": "Parque Jurásico"}
     ]
-  },
-  {
-    "frame" : "frame34",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Sting"},
-      {"lang" : "es", "value" : "El golpe"}
+  },{
+    "frame": "frame137",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Zoolander"},
+      {"lang": "es", "value": "Zoolander: Un descerebrado de moda"},
+      {"lang": "es", "value": "Un descerebrado de moda"}
     ]
-  },
-  {
-    "frame" : "frame24",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Pulp Fiction"}
+  },{
+    "frame": "frame138",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "The Shawshank Redemption"},
+      {"lang": "es", "value": "Cadena perpetua"}
     ]
-  },
-  {
-    "frame" : "frame23",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Star Wars: Episode IV - A New Hope"},
-      {"lang" : "en", "value" : "Star Wars: Episode IV A New Hope"},
-      {"lang" : "en", "value" : "Star Wars: Episode 4 - A New Hope"},
-      {"lang" : "en", "value" : "Star Wars: Episode 4 A New Hope"},
-      {"lang" : "en", "value" : "Star Wars: A New Hope"},
-      {"lang" : "en", "value" : "A New Hope"},
-      {"lang" : "en", "value" : "Star Wars"},
-      {"lang" : "en", "value" : "Star Wars 4"},
-      {"lang" : "en", "value" : "Star Wars IV"},
-      {"lang" : "es", "value" : "La guerra de las galaxias. Episodio IV: Una nueva esperanza"},
-      {"lang" : "es", "value" : "La guerra de las galaxias. Episodio 4: Una nueva esperanza"},
-      {"lang" : "es", "value" : "La guerra de las galaxias: Una nueva esperanza"},
-      {"lang" : "es", "value" : "La guerra de las galaxias"},
-      {"lang" : "es", "value" : "Una nueva esperanza"}
+  },{
+    "frame": "frame139",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Gran Torino"}
     ]
-  },
-  {
-    "frame" : "frame25",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Home Alone"},
-      {"lang" : "es", "value" : "Solo en casa"}
+  },{
+    "frame": "frame140",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Inception"},
+      {"lang": "es", "value": "Origen"}
     ]
-  },
-  {
-    "frame" : "frame33",
-    "lang" : "it",
-    "title" : [
-      {"lang" : "en", "value" : "Life Is Beautiful"},
-      {"lang" : "es", "value" : "La vida es bella"},
-      {"lang" : "it", "value" : "La vita è bella"}
+  },{
+    "frame": "frame150",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Ghostbusters (Ghost Busters)"},
+      {"lang": "en", "value": "Ghostbusters"},
+      {"lang": "en", "value": "Ghost Busters"},
+      {"lang": "es", "value": "Los cazafantasmas"},
+      {"lang": "es", "value": "Cazafantasmas"}
     ]
-  },
-  {
-    "frame" : "frame20",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Men in Black (MIB)"},
-      {"lang" : "en", "value" : "Men in Black"},
-      {"lang" : "en", "value" : "MIB"},
-      {"lang" : "es", "value" : "Men in Black (Hombres de negro)"},
-      {"lang" : "es", "value" : "Hombres de negro"}
+  },{
+    "frame": "frame141",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "T2 - Terminator 2: Judgment Day"},
+      {"lang": "en", "value": "T2, Terminator 2: Judgment Day"},
+      {"lang": "en", "value": "T2"},
+      {"lang": "en", "value": "Terminator 2"},
+      {"lang": "en", "value": "Judgment Day"},
+      {"lang": "es", "value": "Terminator 2: El juicio final"},
+      {"lang": "es", "value": "El juicio final"}
     ]
-  },
-  {
-    "frame" : "frame21",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Hercules"},
-      {"lang" : "es", "value" : "Hércules"}
+  },{
+    "frame": "frame142",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Corpse Bride"},
+      {"lang": "es", "value": "La novia cadáver"}
     ]
-  },
-  {
-    "frame" : "frame26",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Pirates of the Caribbean: The Curse of the Black Pearl"},
-      {"lang" : "en", "value" : "Pirates of the Caribbean 1"},
-      {"lang" : "en", "value" : "The Curse of the Black Pearl"},
-      {"lang" : "es", "value" : "Piratas del Caribe: La maldición de la Perla Negra"},
-      {"lang" : "es", "value" : "Piratas del Caribe 1"},
-      {"lang" : "es", "value" : "La maldición de la Perla Negra"}
+  },{
+    "frame": "frame143",
+    "lang": "es",
+    "title": [
+      {"lang": "en", "value": "Pan's Labyrinth"},
+      {"lang": "es", "value": "El laberinto del fauno"}
     ]
-  },
-  {
-    "frame" : "frame22",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Independence Day"}
+  },{
+    "frame": "frame144",
+    "lang": "de",
+    "title": [
+      {"lang": "en", "value": "The Wave"},
+      {"lang": "es", "value": "La ola"},
+      {"lang": "de", "value": "Die Welle"}
     ]
-  },
-  {
-    "frame" : "frame27",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Beetlejuice"},
-      {"lang" : "en", "value" : "Bitelchus"},
-      {"lang" : "es", "value" : "Bitelchús"}
+  },{
+    "frame": "frame145",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "How the Grinch Stole Christmas"},
+      {"lang": "en", "value": "The Grinch"},
+      {"lang": "en", "value": "Dr. Seuss' How the Grinch Stole Christmas"},
+      {"lang": "es", "value": "El Grinch"}
     ]
-  },
-  {
-    "frame" : "frame28",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Modern Times"},
-      {"lang" : "es", "value" : "Tiempos modernos"}
+  },{
+    "frame": "frame146",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "The Thing"},
+      {"lang": "es", "value": "La cosa (El enigma de otro mundo)"},
+      {"lang": "es", "value": "La cosa"}
     ]
-  },
-  {
-    "frame" : "frame32",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Silence of the Lambs"},
-      {"lang" : "es", "value" : "El silencio de los corderos"}
+  },{
+    "frame": "frame147",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Armageddon"}
     ]
-  },
-  {
-    "frame" : "frame29",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Avengers"},
-      {"lang" : "en", "value" : "The Avengers 1"},
-      {"lang" : "es", "value" : "Los vengadores"},
-      {"lang" : "es", "value" : "Los vengadores 1"},
-      {"lang" : "es", "value" : "Los Vengadores de Marvel"},
-      {"lang" : "es", "value" : "Marvel Los vengadores"}
+  },{
+    "frame": "frame148",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "The Blues Brothers"},
+      {"lang": "en", "value": "Blues Brothers"},
+      {"lang": "es", "value": "Granujas a todo ritmo"}
     ]
-  },
-  {
-    "frame" : "frame30",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Great Escape"},
-      {"lang" : "es", "value" : "La gran evasión"}
-    ]
-  },
-  {
-    "frame" : "frame31",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Joker"}
+  },{
+    "frame": "frame149",
+    "lang": "en",
+    "title": [
+      {"lang": "en", "value": "Rocky"},
+      {"lang": "en", "value": "Rocky 1"},
+      {"lang": "en", "value": "Rocky I"}
     ]
   }
 ]

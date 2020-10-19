@@ -53,13 +53,13 @@
                 <Button
                     android:id="@+id/buttonLevel0"
                     style="@style/Widget.AppCompat.Button"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:gravity="center"
                     android:minWidth="240dp"
-                    android:padding="25dp"
                     android:text="@string/textLevel0"
+                    android:padding="25dp"
                     android:textSize="18sp" />
             </TableRow>
 
@@ -71,11 +71,11 @@
                 <Button
                     android:id="@+id/buttonLevel1"
                     style="@style/Widget.AppCompat.Button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:gravity="center"
-                    android:minWidth="120dp"
+                    android:minWidth="240dp"
                     android:padding="25dp"
                     android:text="@string/textLevel1"
                     android:textSize="18sp" />
@@ -91,11 +91,18 @@
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_span="2"
                     android:gravity="center"
                     android:minWidth="120dp"
                     android:padding="25dp"
                     android:text="@string/textLevel2"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/buttonLevel3"
@@ -108,24 +115,17 @@
                     android:text="@string/textLevel3"
                     android:textSize="16sp" />
 
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-
                 <Button
                     android:id="@+id/buttonLevel4"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
                     android:gravity="center"
-                    android:minWidth="240dp"
-                    android:text="@string/textLevel4"
+                    android:minWidth="120dp"
                     android:padding="25dp"
-                    android:textSize="18sp" />
+                    android:text="@string/textLevel4"
+                    android:textSize="16sp" />
+
             </TableRow>
 
         </TableLayout>
