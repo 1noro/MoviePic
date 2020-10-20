@@ -5,10 +5,9 @@
     <string name="loading">Carregando</string>
     <string name="loadingLevelMsg">Obtendo fotogramas…</string>
 
-    <string name="textLevel0">Fácil</string>
-    <string name="textLevel1">Esencial</string>
-    <string name="textLevel2">Básico</string>
-    <string name="textLevel3">B &amp; N</string>
+    <string name="textLevel0">Populares</string>
+    <string name="textLevel1">Esenciais</string>
+    <string name="textLevel2">Doadas</string>
 
     <string name="help1">Adiviña o título completo da película baseándote no único fotograma amosado.</string>
     <string name="help2">Non precisas introducir nin acentos nin signos de puntuación na respuesta.</string>
@@ -26,8 +25,8 @@
     <string name="iconDescription">Icono da App</string>
     <string name="levelNotAccesible1">Acerta</string>
     <string name="levelNotAccesible2">no nivel anterior</string>
-    <string name="textLevel4">2019</string>
     <string name="license">por Inoro\nGPL3 ou posterior</string>
     <string name="levelFrameDescription">Fotograma número </string>
-    <string name="textLevel5">Fácil</string>
+    <string name="textLevel5">B &amp; N</string>
+    <string name="notAvailable">Non dispoñibel</string>
 </resources>

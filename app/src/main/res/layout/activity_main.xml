@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -111,9 +112,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:minWidth="120dp"
+                    android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel3"
-                    android:textSize="16sp" />
+                    android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/buttonLevel4"
@@ -122,9 +124,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:minWidth="120dp"
+                    android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel4"
-                    android:textSize="16sp" />
+                    android:textSize="12sp" />
 
             </TableRow>
 

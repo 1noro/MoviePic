@@ -16,7 +16,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int unlockNextLevel = 2;
+    private int unlockNextLevel = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             setLevelButton(R.id.buttonLevel0, 0, R.raw.level0, "[]");
             setLevelButton(R.id.buttonLevel1, 1, R.raw.level1, "[0]");
             setLevelButton(R.id.buttonLevel2, 2, R.raw.level2, "[1]");
-            setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[2]");
-            setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2]");
+//            setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[2]");
+//            setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2]");
 
             JSONObject preferences = GameUtils.readAppPreferences(this, defaultPreferences);
             // si ha cambiado la disposición de los niveles, se borra el progreso
@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {e.printStackTrace();}
             }
         });
+    }
+
+    public void alertNotAvailable(View view) {
+        Toast.makeText(this, this.getResources().getString(R.string.notAvailable), Toast.LENGTH_SHORT).show();
     }
 
 }
