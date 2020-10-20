@@ -1,13 +1,14 @@
 [
   {
-    "frame" : "frame1",
-    "lang" : "de",
+    "frame" : "frame35",
+    "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "The Cabinet of Droctor Caligari"},
-      {"lang" : "en", "value" : "The Cabinet of Dr. Caligari"},
-      {"lang" : "es", "value" : "El gabinete del Doctor Caligari"},
-      {"lang" : "es", "value" : "El gabinete del Dr. Caligari"},
-      {"lang" : "de", "value" : "Das Kabinett des Dr. Caligari"}
+      {"lang" : "en", "value" : "The Lord of the Rings: The Fellowship of the Ring"},
+      {"lang" : "en", "value" : "The Fellowship of the Ring"},
+      {"lang" : "en", "value" : "The Lord of the Rings 1"},
+      {"lang" : "es", "value" : "El señor de los anillos: La comunidad del anillo"},
+      {"lang" : "es", "value" : "La comunidad del anillo"},
+      {"lang" : "es", "value" : "El señor de los anillos 1"}
     ]
   },
   {
@@ -48,12 +49,12 @@
     ]
   },
   {
-    "frame" : "frame8",
+    "frame" : "frame151",
     "lang" : "it",
     "title" : [
-      {"lang" : "en", "value" : "For a Few Dollars More"},
-      {"lang" : "es", "value" : "La muerte tenía un precio"},
-      {"lang" : "it", "value" : "Per qualche dollaro in più"}
+      {"lang" : "en", "value" : "The Good, the Bad, and the Ugly"},
+      {"lang" : "es", "value" : "El bueno, el feo y el malo"},
+      {"lang" : "it", "value" : "Il buono, il brutto, il cattivo"}
     ]
   },
   {
@@ -64,11 +65,10 @@
     ]
   },
   {
-    "frame" : "frame13",
+    "frame" : "frame7",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "Citizen Kane"},
-      {"lang" : "es", "value" : "Ciudadano Kane"}
+      {"lang" : "en", "value" : "Titanic"}
     ]
   },
   {
@@ -96,11 +96,14 @@
     ]
   },
   {
-    "frame" : "frame17",
+    "frame" : "frame37",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "There Will Be Blood"},
-      {"lang" : "es", "value" : "Pozos de ambición"}
+      {"lang" : "en", "value" : "Mad Max: Fury Road"},
+      {"lang" : "en", "value" : "Mad Max 4"},
+      {"lang" : "en", "value" : "Fury Road"},
+      {"lang" : "es", "value" : "Mad Max: Furia en la carretera"},
+      {"lang" : "es", "value" : "Furia en la carretera"}
     ]
   },
   {
@@ -112,10 +115,11 @@
     ]
   },
   {
-    "frame" : "frame19",
+    "frame" : "frame40",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "Blade Runner"}
+      {"lang" : "en", "value" : "Alien"},
+      {"lang" : "es", "value" : "Alien, el octavo pasajero"}
     ]
   },
   {
@@ -129,11 +133,11 @@
     ]
   },
   {
-    "frame" : "frame34",
+    "frame" : "frame45",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "The Sting"},
-      {"lang" : "es", "value" : "El golpe"}
+      {"lang" : "en", "value" : "The Princess Bride"},
+      {"lang" : "es", "value" : "La princesa prometida"}
     ]
   },
   {
@@ -236,11 +240,16 @@
     ]
   },
   {
-    "frame" : "frame32",
+    "frame" : "frame39",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "The Silence of the Lambs"},
-      {"lang" : "es", "value" : "El silencio de los corderos"}
+      {"lang" : "en", "value" : "Indiana Jones: Raiders of the Lost Ark"},
+      {"lang" : "en", "value" : "Indiana Jones 1"},
+      {"lang" : "en", "value" : "Raiders of the Lost Ark"},
+      {"lang" : "es", "value" : "En busca del arca perdida"},
+      {"lang" : "es", "value" : "Indiana Jones: En busca del arca perdida"},
+      {"lang" : "es", "value" : "Indiana Jones y los cazadores del arca perdida"},
+      {"lang" : "es", "value" : "Indiana Jones: Los cazadores del arca perdida"}
     ]
   },
   {
@@ -253,14 +262,6 @@
       {"lang" : "es", "value" : "Los vengadores 1"},
       {"lang" : "es", "value" : "Los Vengadores de Marvel"},
       {"lang" : "es", "value" : "Marvel Los vengadores"}
-    ]
-  },
-  {
-    "frame" : "frame30",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Great Escape"},
-      {"lang" : "es", "value" : "La gran evasión"}
     ]
   },
   {

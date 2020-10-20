@@ -95,6 +95,7 @@
                     android:layout_span="2"
                     android:gravity="center"
                     android:minWidth="120dp"
+                    android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel2"
                     android:textSize="18sp" />

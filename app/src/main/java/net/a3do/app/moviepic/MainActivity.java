@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             setLevelButton(R.id.buttonLevel0, 0, R.raw.level0, "[]");
             setLevelButton(R.id.buttonLevel1, 1, R.raw.level1, "[0]");
-            setLevelButton(R.id.buttonLevel2, 2, R.raw.level2, "[1]");
+//            setLevelButton(R.id.buttonLevel2, 2, R.raw.level2, "[1]");
 //            setLevelButton(R.id.buttonLevel3, 3, R.raw.level3, "[2]");
 //            setLevelButton(R.id.buttonLevel4, 4, R.raw.level4, "[2]");
 

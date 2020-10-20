@@ -1,41 +1,11 @@
 [
   {
-    "frame" : "frame35",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Lord of the Rings: The Fellowship of the Ring"},
-      {"lang" : "en", "value" : "The Fellowship of the Ring"},
-      {"lang" : "en", "value" : "The Lord of the Rings 1"},
-      {"lang" : "es", "value" : "El señor de los anillos: La comunidad del anillo"},
-      {"lang" : "es", "value" : "La comunidad del anillo"},
-      {"lang" : "es", "value" : "El señor de los anillos 1"}
-    ]
-  },
-  {
     "frame" : "frame36",
     "lang" : "en",
     "title" : [
       {"lang" : "en", "value" : "Boyhood"},
       {"lang" : "es", "value" : "Boyhood (Momentos de una vida)"},
       {"lang" : "es", "value" : "Momentos de una vida"}
-    ]
-  },
-  {
-    "frame" : "frame7",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Titanic"}
-    ]
-  },
-  {
-    "frame" : "frame37",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Mad Max: Fury Road"},
-      {"lang" : "en", "value" : "Mad Max 4"},
-      {"lang" : "en", "value" : "Fury Road"},
-      {"lang" : "es", "value" : "Mad Max: Furia en la carretera"},
-      {"lang" : "es", "value" : "Furia en la carretera"}
     ]
   },
   {
@@ -46,27 +16,6 @@
       {"lang" : "es", "value" : "El viaje de Chihiro"},
       {"lang" : "jp", "value" : "Sen to Chihiro no kamikakushi"},
       {"lang" : "jp", "value" : "Chihiro"}
-    ]
-  },
-  {
-    "frame" : "frame39",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Indiana Jones: Raiders of the Lost Ark"},
-      {"lang" : "en", "value" : "Indiana Jones 1"},
-      {"lang" : "en", "value" : "Raiders of the Lost Ark"},
-      {"lang" : "es", "value" : "En busca del arca perdida"},
-      {"lang" : "es", "value" : "Indiana Jones: En busca del arca perdida"},
-      {"lang" : "es", "value" : "Indiana Jones y los cazadores del arca perdida"},
-      {"lang" : "es", "value" : "Indiana Jones: Los cazadores del arca perdida"}
-    ]
-  },
-  {
-    "frame" : "frame40",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Alien"},
-      {"lang" : "es", "value" : "Alien, el octavo pasajero"}
     ]
   },
   {
@@ -118,14 +67,6 @@
     "title" : [
       {"lang" : "en", "value" : "The Help"},
       {"lang" : "es", "value" : "Criadas y señoras"}
-    ]
-  },
-  {
-    "frame" : "frame45",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Princess Bride"},
-      {"lang" : "es", "value" : "La princesa prometida"}
     ]
   },
   {

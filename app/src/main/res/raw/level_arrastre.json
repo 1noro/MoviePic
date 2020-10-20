@@ -1,10 +1,69 @@
 [
   {
-    "frame": "frame0",
-    "lang": "en",
-    "title": [
-      {"lang": "en", "value": "2001: A Space Odyssey"},
-      {"lang": "es","value": "2001: Una odisea del espacio"}
+    "frame" : "frame1",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "en", "value" : "The Cabinet of Droctor Caligari"},
+      {"lang" : "en", "value" : "The Cabinet of Dr. Caligari"},
+      {"lang" : "es", "value" : "El gabinete del Doctor Caligari"},
+      {"lang" : "es", "value" : "El gabinete del Dr. Caligari"},
+      {"lang" : "de", "value" : "Das Kabinett des Dr. Caligari"}
+    ]
+  },
+  {
+    "frame" : "frame13",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Citizen Kane"},
+      {"lang" : "es", "value" : "Ciudadano Kane"}
+    ]
+  },
+  {
+    "frame" : "frame17",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "There Will Be Blood"},
+      {"lang" : "es", "value" : "Pozos de ambición"}
+    ]
+  },
+  {
+    "frame" : "frame32",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Silence of the Lambs"},
+      {"lang" : "es", "value" : "El silencio de los corderos"}
+    ]
+  },
+  {
+    "frame" : "frame19",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Blade Runner"}
+    ]
+  },
+  {
+    "frame" : "frame34",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Sting"},
+      {"lang" : "es", "value" : "El golpe"}
+    ]
+  },
+  {
+    "frame" : "frame8",
+    "lang" : "it",
+    "title" : [
+      {"lang" : "en", "value" : "For a Few Dollars More"},
+      {"lang" : "es", "value" : "La muerte tenía un precio"},
+      {"lang" : "it", "value" : "Per qualche dollaro in più"}
+    ]
+  },
+  {
+    "frame" : "frame30",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Great Escape"},
+      {"lang" : "es", "value" : "La gran evasión"}
     ]
   }
 ]
