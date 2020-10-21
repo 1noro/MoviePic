@@ -1,5 +1,6 @@
 package net.a3do.app.moviepic;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         // Mostramos el layout
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main);
 
         // Mostrar el código del idioma al iniciar
 //        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();
@@ -98,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void alertNotAvailable(View view) {
         Toast.makeText(this, this.getResources().getString(R.string.notAvailable), Toast.LENGTH_SHORT).show();
+    }
+
+    public void openHelp(View view) {
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
     }
 
 }
