@@ -90,7 +90,13 @@ public class LevelActivity extends AppCompatActivity {
 
     public void setFABNotAnswered() {
         FloatingActionButton buttonAnswer = findViewById(R.id.buttonAnswer);
-        buttonAnswer.setImageResource(R.drawable.question);
+        buttonAnswer.setImageResource(R.drawable.ic_arrow_w);
+        buttonAnswer.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary)));
+    }
+
+    public void setFABWrongAnswered() {
+        FloatingActionButton buttonAnswer = findViewById(R.id.buttonAnswer);
+        buttonAnswer.setImageResource(R.drawable.ic_arrow_w);
         buttonAnswer.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getApplicationContext(), R.color.red)));
     }
 
@@ -107,10 +113,11 @@ public class LevelActivity extends AppCompatActivity {
             titleAnswerBox.setText(lastFailedAnswer);
             if (lastFailedAnswer.equals("")) {
                 titleAnswerBox.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textColor));
+                setFABNotAnswered();
             } else {
                 titleAnswerBox.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
+                setFABWrongAnswered();
             }
-            setFABNotAnswered();
             titleAnswerBox.setVisibility(View.VISIBLE);
             titleAnswered.setVisibility(View.GONE);
         }
@@ -147,6 +154,7 @@ public class LevelActivity extends AppCompatActivity {
             } else {
                 levelObj.setLastFailedAnswer(mViewPager.getCurrentItem(), titleToCheck);
                 titleAnswerBox.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
+                setFABWrongAnswered();
             }
         }
     }

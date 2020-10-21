@@ -8,8 +8,8 @@ android {
         applicationId "net.a3do.app.moviepic"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 19
-        versionName "0.3.2"
+        versionCode 20
+        versionName "0.3.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true // added by cosmo 202010202058

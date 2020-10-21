@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
+import android.view.Window;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;

@@ -19,9 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LevelActivity"
+        <activity android:name="LevelActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".HelpActivity"
+        <activity android:name="HelpActivity"
+            android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" />
     </application>
 

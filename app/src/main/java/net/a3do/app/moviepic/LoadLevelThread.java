@@ -34,7 +34,7 @@ public class LoadLevelThread extends Thread {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-        Intent intentLevel = new Intent(context.getApplicationContext(), LevelActivity.class);
+        Intent intentLevel = new Intent(context, LevelActivity.class);
         intentLevel.putExtra("levelId", levelId);
         intentLevel.putExtra("levelItemJsonId", levelFileJSONId);
         context.startActivity(intentLevel);

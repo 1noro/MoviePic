@@ -28,6 +28,7 @@
             android:paddingEnd="25dp"
             android:text="@string/help1"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
         <TextView
@@ -39,6 +40,7 @@
             android:paddingEnd="25dp"
             android:text="@string/help2"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
         <TextView
@@ -50,6 +52,7 @@
             android:paddingEnd="25dp"
             android:text="@string/help3"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
         <TextView
@@ -61,6 +64,7 @@
             android:paddingEnd="25dp"
             android:text="@string/help4"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
         <TextView
@@ -72,18 +76,20 @@
             android:paddingEnd="25dp"
             android:text="@string/help5"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/eleteProgressButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="50dp"
-            android:background="@color/red"
+            android:layout_marginEnd="60dp"
+            android:onClick="alertNotAvailable"
             android:text="@string/deleteProgressButton"
-            android:textColor="@color/textColorInverted"
+            android:textColor="@color/red"
             android:textSize="18sp" />
 
     </LinearLayout>

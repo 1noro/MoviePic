@@ -59,7 +59,8 @@
                 android:layout_marginTop="0dp"
                 android:text="@string/introductoryText"
                 android:textAlignment="center"
-                android:textColor="@color/textColor" />
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
 
             <TableLayout
                 android:id="@+id/ButtonsTable"
