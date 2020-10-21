@@ -6,7 +6,7 @@
     <color name="green">#5eba7d</color>
     <color name="red">#C75450</color>
     <color name="lightBackground">#FFFFFFFF</color>
-    <color name="lightBackgroundTransparent">#D9FFFFFF</color>
+    <color name="lightBackgroundTransparent">#F2FFFFFF</color>
     <color name="textColor">#000000</color>
     <color name="textHintColor">#323232</color>
 </resources>

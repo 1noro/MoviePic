@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         // Mostramos el layout
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main3);
 
         // Mostrar el código del idioma al iniciar
 //        Toast.makeText(this, Locale.getDefault().getLanguage(), Toast.LENGTH_SHORT).show();

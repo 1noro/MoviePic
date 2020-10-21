@@ -32,4 +32,6 @@
     <string name="textLevel5">B &amp; W</string>
     <string name="textLevel6" translatable="false">2019</string>
     <string name="notAvailable">Not available</string>
+    <string name="introductoryText">Click on a level to start solving</string>
+    <string name="frame">frame</string>
 </resources>

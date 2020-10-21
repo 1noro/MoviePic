@@ -36,8 +36,18 @@
             android:layout_marginBottom="0dp"
             android:text="@string/app_name"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/introductoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/introductoryText"
+            android:textAlignment="center"
+            android:textColor="@color/textColor" />
 
         <TableLayout
             android:id="@+id/ButtonsTable"
@@ -59,8 +69,9 @@
                     android:layout_span="2"
                     android:gravity="center"
                     android:minWidth="240dp"
-                    android:text="@string/textLevel0"
                     android:padding="25dp"
+                    android:text="@string/textLevel0"
+                    android:textColor="@color/textColor"
                     android:textSize="18sp" />
             </TableRow>
 
@@ -79,6 +90,7 @@
                     android:minWidth="240dp"
                     android:padding="25dp"
                     android:text="@string/textLevel1"
+                    android:textColor="@color/textColor"
                     android:textSize="18sp" />
             </TableRow>
 
@@ -98,6 +110,7 @@
                     android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel2"
+                    android:textColor="@color/textColor"
                     android:textSize="18sp" />
             </TableRow>
 
@@ -116,6 +129,7 @@
                     android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel3"
+                    android:textColor="@color/textColor"
                     android:textSize="12sp" />
 
                 <Button
@@ -128,6 +142,7 @@
                     android:onClick="alertNotAvailable"
                     android:padding="25dp"
                     android:text="@string/textLevel4"
+                    android:textColor="@color/textColor"
                     android:textSize="12sp" />
 
             </TableRow>
@@ -140,7 +155,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="@string/license"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/textColor" />
 
     </LinearLayout>
 </ScrollView>
