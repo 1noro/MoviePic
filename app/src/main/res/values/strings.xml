@@ -34,4 +34,6 @@
     <string name="notAvailable">Not available</string>
     <string name="introductoryText">Click on a level to start solving</string>
     <string name="frame">frame</string>
+    <string name="helpTitle">Help</string>
+    <string name="deleteProgressButton">Delete progress</string>
 </resources>

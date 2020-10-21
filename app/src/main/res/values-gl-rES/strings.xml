@@ -31,4 +31,6 @@
     <string name="notAvailable">Non dispoñibel</string>
     <string name="introductoryText">Fai clic nun nivel para comezar a resolver</string>
     <string name="frame">fotograma</string>
+    <string name="helpTitle">Axuda</string>
+    <string name="deleteProgressButton">Borrar progreso</string>
 </resources>

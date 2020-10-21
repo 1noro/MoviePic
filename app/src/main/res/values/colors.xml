@@ -8,5 +8,6 @@
     <color name="lightBackground">#FFFFFFFF</color>
     <color name="lightBackgroundTransparent">#F2FFFFFF</color>
     <color name="textColor">#000000</color>
+    <color name="textColorInverted">#FFFFFF</color>
     <color name="textHintColor">#323232</color>
 </resources>
