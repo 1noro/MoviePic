@@ -80,23 +80,13 @@ public class Level {
         if (GameUtils.checkTitle(levelArray.getJSONObject(mViewPager.getCurrentItem()).getJSONArray("title"), titleToCheck)) {
             levelStatusArray.put(mViewPager.getCurrentItem());
             GameUtils.writeStringToFile(context, this.fileStatusDir, levelStatusArray.toString());
-            if (levelStatusArray.length() >= MainActivity.unlockNextLevel) {
+            if (levelStatusArray.length() >= MainActivity.unlockNextLevel && !this.minimumExceeded) {
                 this.minimumExceeded = true;
-                GameUtils.showAlertDialog(
-                        context,
-                        context.getResources().getString(R.string.congratulations),
-                        context.getResources().getString(R.string.nextLevelUnlocked),
-                        context.getResources().getString(R.string.ok)
-                );
+                GameUtils.showAlertDialog(context, context.getResources().getString(R.string.congratulations), context.getResources().getString(R.string.nextLevelUnlocked), context.getResources().getString(R.string.ok));
             }
-            if (levelStatusArray.length() >= levelArray.length()) {
+            if (levelStatusArray.length() >= levelArray.length() && !this.levelCompleted) {
                 this.levelCompleted = true;
-                GameUtils.showAlertDialog(
-                        context,
-                        context.getResources().getString(R.string.congratulations),
-                        context.getResources().getString(R.string.levelCompleted),
-                        context.getResources().getString(R.string.ok)
-                );
+                GameUtils.showAlertDialog(context, context.getResources().getString(R.string.congratulations), context.getResources().getString(R.string.levelCompleted), context.getResources().getString(R.string.ok));
             }
             out = true;
         }
