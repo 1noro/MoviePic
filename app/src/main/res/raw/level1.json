@@ -268,7 +268,9 @@
     "frame" : "frame31",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "Joker"}
+      {"lang" : "en", "value" : "Joker"},
+      {"lang" : "es", "value" : "Joker"},
+      {"lang" : "es", "value" : "El jajas"}
     ]
   }
 ]

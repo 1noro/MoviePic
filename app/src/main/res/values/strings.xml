@@ -4,6 +4,9 @@
     <string name="notImplementedYet">not implemented yet</string>
     <string name="loading">Loading</string>
     <string name="loadingLevelMsg">Getting frames…</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
 
     <string name="textLevel0">Pupular</string>
     <string name="textLevel1">Essential</string>
@@ -35,5 +38,11 @@
     <string name="introductoryText">Click on a level to start solving</string>
     <string name="frame">frame</string>
     <string name="helpTitle">Help</string>
+
     <string name="deleteProgressButton">Delete progress</string>
+    <string name="resetProgressMsg">Are you sure you want to delete your progress?</string>
+    <string name="resetProgressToast">Progress removed</string>
+    <string name="nextLevelUnlocked">Next level unlocked!</string>
+    <string name="levelCompleted">Level completed!</string>
+    <string name="congratulations">Congratulations!</string>
 </resources>

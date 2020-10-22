@@ -1,12 +1,12 @@
 package net.a3do.app.moviepic;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
@@ -25,7 +25,30 @@ public class HelpActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
     }
 
-    public void alertNotAvailable(View view) {
-        Toast.makeText(this, this.getResources().getString(R.string.notAvailable), Toast.LENGTH_SHORT).show();
+//    public void alertNotAvailable(View view) {
+//        Toast.makeText(this, this.getResources().getString(R.string.notAvailable), Toast.LENGTH_SHORT).show();
+//    }
+
+    public void deleteProgress(View view) {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        GameUtils.resetAllLevelStatus(HelpActivity.this);
+                        Toast.makeText(HelpActivity.this, HelpActivity.this.getResources().getString(R.string.resetProgressToast), Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(this.getResources().getString(R.string.resetProgressMsg));
+        builder.setPositiveButton(this.getResources().getString(R.string.yes), dialogClickListener);
+        builder.setNegativeButton(this.getResources().getString(R.string.no), dialogClickListener);
+        builder.show();
     }
 }

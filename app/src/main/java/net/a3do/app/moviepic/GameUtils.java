@@ -4,7 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
-import android.view.Window;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -253,11 +254,26 @@ public class GameUtils {
         }
         es.shutdown();
         try {
-            boolean finished = es.awaitTermination(10, TimeUnit.SECONDS);
+            boolean finished = es.awaitTermination(15, TimeUnit.SECONDS);
             if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void showAlertDialog(Context context, String title, String msg, String buttonText) {
+        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(context).create();
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(msg);
+        alertDialog.setButton(
+                androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL,
+                buttonText,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
     }
 
 }

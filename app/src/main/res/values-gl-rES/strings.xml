@@ -33,4 +33,12 @@
     <string name="frame">fotograma</string>
     <string name="helpTitle">Axuda</string>
     <string name="deleteProgressButton">Borrar progreso</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="resetProgressMsg">Seguro que queres eliminar o teu progreso?</string>
+    <string name="resetProgressToast">Eliminouse o progreso</string>
+    <string name="nextLevelUnlocked">Seguinte nivel desbloqueado!</string>
+    <string name="congratulations">Noraboa!</string>
+    <string name="ok">Aceptar</string>
+    <string name="levelCompleted">Nivel completado!</string>
 </resources>

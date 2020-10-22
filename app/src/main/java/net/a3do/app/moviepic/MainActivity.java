@@ -17,7 +17,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int unlockNextLevel = 20;
+    public static int unlockNextLevel = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         buttonObj.setOnClickListener(new MyOnClickListener(parameters) {
             @Override
             public void onClick(View view) {
-                int unlockNextLevel = MainActivity.this.unlockNextLevel;
+                int unlockNextLevel = MainActivity.unlockNextLevel;
                 try {
                     JSONArray previousLevelIds = this.parameters.getJSONArray("previousLevelIds");
                     if (previousLevelIds.length() > 0) {
