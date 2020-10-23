@@ -41,4 +41,5 @@
     <string name="congratulations">¡Felicidades!</string>
     <string name="ok">Aceptar</string>
     <string name="levelCompleted">¡Nivel completado!</string>
+    <string name="helpButtonDesc">Botón de ayuda</string>
 </resources>

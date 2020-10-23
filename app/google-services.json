@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "866397405173",
+    "firebase_url": "https://moviepic-50033.firebaseio.com",
+    "project_id": "moviepic-50033",
+    "storage_bucket": "moviepic-50033.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866397405173:android:3840ee987190ab15c3eabc",
+        "android_client_info": {
+          "package_name": "net.a3do.app.moviepic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866397405173-6h7rfdid6cc6d7uddt5s7ps5cfmarjm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.a3do.app.moviepic",
+            "certificate_hash": "857070a6c2e10b9176b59ee9d38be6460bc058ad"
+          }
+        },
+        {
+          "client_id": "866397405173-1siuc6i6qu40c0flh7k9ernejl27b3fn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8-rhRiNlvnkjfjEmqMCAMqlgBgI1hew4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866397405173-1siuc6i6qu40c0flh7k9ernejl27b3fn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
