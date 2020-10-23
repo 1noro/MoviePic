@@ -45,5 +45,5 @@
     <string name="nextLevelUnlocked">Next level unlocked!</string>
     <string name="levelCompleted">Level completed!</string>
     <string name="congratulations">Congratulations!</string>
-    <string name="helpButtonDesc">Help button</string>
+    <string name="helpButtonDesc">help</string>
 </resources>

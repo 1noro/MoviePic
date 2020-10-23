@@ -4,8 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -274,6 +274,16 @@ public class GameUtils {
                     }
                 });
         alertDialog.show();
+    }
+
+    public static AlertDialog.Builder getDialogProgressBar(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(context.getResources().getString(R.string.loading));
+        final ProgressBar progressBar = new ProgressBar(context,null, android.R.attr.progressBarStyleHorizontal);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        progressBar.setLayoutParams(lp);
+        builder.setView(progressBar);
+        return builder;
     }
 
 }
