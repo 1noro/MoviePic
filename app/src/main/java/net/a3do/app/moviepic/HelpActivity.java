@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
+
+
 public class HelpActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +32,7 @@ public class HelpActivity extends AppCompatActivity {
 //    }
 
     public void deleteProgress(View view) {
+//        if (true) throw new RuntimeException("Test Crash");
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
