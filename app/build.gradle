@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services' // firebase
 apply plugin: 'com.google.firebase.crashlytics' // firebase-crashlytics
+apply plugin: 'com.google.firebase.firebase-perf' // firebase-perf
+
 
 android {
     compileSdkVersion 30
@@ -12,6 +14,7 @@ android {
         targetSdkVersion 30
         versionCode 23
         versionName "0.3.6"
+        multiDexEnabled true // to fix the firebase-perf error
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true // added by cosmo 202010202058
@@ -38,5 +41,7 @@ dependencies {
     // firebase
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-crashlytics' // crashlytics
+    implementation 'com.google.firebase:firebase-perf:19.0.9' // perf
+    implementation "androidx.multidex:multidex:2.0.1" // to fix the firebase-perf error
 }
