@@ -239,18 +239,34 @@ public class GameUtils {
         boolean createdCacheLevelDir = cacheDir.mkdirs();
         if (createdCacheLevelDir) Log.d("CARPETA CREADA", String.valueOf(cacheDir));
 
-        ExecutorService es = Executors.newCachedThreadPool();
-        for (int i = 0; i < levelArray.length(); i++) {
+        // Descargamos la primera mitad del nivel
+        ExecutorService es1 = Executors.newCachedThreadPool();
+        for (int i = 0; i < levelArray.length()/2; i++) {
             String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
-            es.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
+            es1.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
         }
-        es.shutdown();
+        es1.shutdown();
         try {
-            boolean finished = es.awaitTermination(15, TimeUnit.SECONDS);
+            boolean finished = es1.awaitTermination(10, TimeUnit.SECONDS);
             if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        // Descargamos la segunda mitad del nivel
+        ExecutorService es2 = Executors.newCachedThreadPool();
+        for (int i = levelArray.length()/2; i < levelArray.length(); i++) {
+            String filename = levelArray.getJSONObject(i).getString("frame") + ".jpg";
+            es2.execute(new FrameDownloaderThread("fdw" + i, levelId, cacheDir, filename));
+        }
+        es2.shutdown();
+        try {
+            boolean finished = es2.awaitTermination(10, TimeUnit.SECONDS);
+            if (finished) Log.d("Info de la descarga", "Se han terminado de ejecutar todos los hilos de descarga.");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void showAlertDialog(Context context, String title, String msg, String buttonText) {
