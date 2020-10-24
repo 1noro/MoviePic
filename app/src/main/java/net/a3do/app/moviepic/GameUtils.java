@@ -280,8 +280,12 @@ public class GameUtils {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(context.getResources().getString(R.string.loading));
         final ProgressBar progressBar = new ProgressBar(context,null, android.R.attr.progressBarStyleHorizontal);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        progressBar.setLayoutParams(lp);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        layoutParams.setMargins(0, 25, 0, 0);
+        progressBar.setLayoutParams(layoutParams);
         builder.setView(progressBar);
         return builder;
     }
