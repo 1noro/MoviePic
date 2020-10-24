@@ -27,12 +27,7 @@ public class HelpActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
     }
 
-//    public void alertNotAvailable(View view) {
-//        Toast.makeText(this, this.getResources().getString(R.string.notAvailable), Toast.LENGTH_SHORT).show();
-//    }
-
     public void deleteProgress(View view) {
-//        if (true) throw new RuntimeException("Test Crash");
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

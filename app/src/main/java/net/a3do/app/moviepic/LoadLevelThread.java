@@ -23,18 +23,10 @@ public class LoadLevelThread extends Thread {
         this.context = context;
         this.levelId = levelId;
         this.levelFileJSONId = levelFileJSONId;
-////        this.progressDialog = new ProgressDialog(context);
-////        this.progressDialog.setTitle(context.getResources().getString(R.string.loading));
-////        this.progressDialog.setMessage(context.getResources().getString(R.string.loadingLevelMsg));
-////        this.progressDialog.setCancelable(false); // disable dismiss by tapping outside of the dialog
-////        this.progressDialog.show();
-//        this.progressDialog = GameUtils.getDialogProgressBar(context).create();
-//        this.progressDialog.show();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         // Get the layout inflater
         LayoutInflater inflater = LayoutInflater.from(context);
-
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
         builder.setView(inflater.inflate(R.layout.dialog_loading, null));

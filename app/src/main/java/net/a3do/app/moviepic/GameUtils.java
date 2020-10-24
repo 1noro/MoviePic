@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -234,12 +232,6 @@ public class GameUtils {
         return out;
     }
 
-//    public static void showToastOnTop(Context context, String text) {
-//        Toast toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
-//        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 40);
-//        toast.show();
-//    }
-
     public static void downloadLevelFrames(Context context, int levelId, int levelFileJSONId) throws IOException, JSONException {
         JSONArray levelArray = new JSONArray(GameUtils.readJsonFile(context, levelFileJSONId));
 
@@ -274,22 +266,6 @@ public class GameUtils {
                     }
                 });
         alertDialog.show();
-    }
-
-    public static AlertDialog.Builder getDialogProgressBar(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(context.getResources().getString(R.string.loading));
-//        final ProgressBar progressBar = new ProgressBar(context,null, android.R.attr.progressBarStyleHorizontal);
-        final ProgressBar progressBar = new ProgressBar(context);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-//        layoutParams.setMargins(0, 25, 0, 0);
-        progressBar.setLayoutParams(layoutParams);
-        progressBar.setPadding(0, 0, 0, 50);
-        builder.setView(progressBar);
-        return builder;
     }
 
 }
