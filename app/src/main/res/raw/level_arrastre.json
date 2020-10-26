@@ -247,5 +247,63 @@
       {"lang" : "es", "value" : "La jungla de cristal"},
       {"lang" : "es", "value" : "La jungla de cristal 1"}
     ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "fr",
+    "title" : [
+      {"lang" : "en", "value" : "Intouchables"},
+      {"lang" : "es", "value" : "Intocable"},
+      {"lang" : "es", "value" : "Amigos intocables"},
+      {"lang" : "fr", "value" : "Intouchables"}
+    ]
+  },
+  {
+    "frame" : "frame32",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Silence of the Lambs"},
+      {"lang" : "es", "value" : "El silencio de los corderos"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Pianist"},
+      {"lang" : "es", "value" : "El pianista"},
+      {"lang" : "fr", "value" : "Le Pianiste"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Full Metal Jacket"},
+      {"lang" : "es", "value" : "La chaqueta metálica"}
+    ]
+  },
+  {
+    "frame" : "frame56",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Scarface"},
+      {"lang" : "es", "value" : "El precio del poder"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Shutter Island"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Sixth Sense"},
+      {"lang" : "es", "value" : "El sexto sentido"}
+    ]
   }
 ]

@@ -12,45 +12,9 @@
   },
   {
     "frame" : "frame0",
-    "lang" : "fr",
-    "title" : [
-      {"lang" : "en", "value" : "Intouchables"},
-      {"lang" : "es", "value" : "Intocable"},
-      {"lang" : "es", "value" : "Amigos intocables"},
-      {"lang" : "fr", "value" : "Intouchables"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Dark Knight"},
-      {"lang" : "en", "value" : "Bataman, the Dark Knight"},
-      {"lang" : "en", "value" : "Dark Knight"},
-      {"lang" : "es", "value" : "El caballero oscuro"},
-      {"lang" : "es", "value" : "Batman, el caballero oscuro"}
-    ]
-  },
-  {
-    "frame" : "frame0",
     "lang" : "en",
     "title" : [
       {"lang" : "en", "value" : "Forrest Gump"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Forrest Gump"}
-    ]
-  },
-  {
-    "frame" : "frame32",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Silence of the Lambs"},
-      {"lang" : "es", "value" : "El silencio de los corderos"}
     ]
   },
   {
@@ -59,15 +23,6 @@
     "title" : [
       {"lang" : "en", "value" : "It's a Wonderful Life"},
       {"lang" : "es", "value" : "Qué bello es vivir"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Pianist"},
-      {"lang" : "es", "value" : "El pianista"},
-      {"lang" : "fr", "value" : "Le Pianiste"}
     ]
   },
   {
@@ -84,22 +39,6 @@
     "title" : [
       {"lang" : "en", "value" : "V For Vendetta"},
       {"lang" : "es", "value" : "V de Vendetta"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Full Metal Jacket"},
-      {"lang" : "es", "value" : "La chaqueta metálica"}
-    ]
-  },
-  {
-    "frame" : "frame56",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Scarface"},
-      {"lang" : "es", "value" : "El precio del poder"}
     ]
   },
   {
@@ -132,13 +71,6 @@
     "title" : [
       {"lang" : "en", "value" : "Fight Club"},
       {"lang" : "es", "value" : "El club de la lucha"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "Shutter Island"}
     ]
   },
   {
@@ -207,14 +139,6 @@
     "frame" : "frame0",
     "lang" : "en",
     "title" : [
-      {"lang" : "en", "value" : "The Sixth Sense"},
-      {"lang" : "es", "value" : "El sexto sentido"}
-    ]
-  },
-  {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
       {"lang" : "en", "value" : "The Addams Family"},
       {"lang" : "es", "value" : "La familia Addams"}
     ]
@@ -274,6 +198,70 @@
     "title" : [
       {"lang" : "en", "value" : "The Mummy"},
       {"lang" : "es", "value" : "La momia"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Grease"},
+      {"lang" : "es", "value" : "Grease"},
+      {"lang" : "es", "value" : "Brillantina"},
+      {"lang" : "es", "value" : "Vaselina"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "The Simpsons Movie"},
+      {"lang" : "es", "value" : "Los Simpson: La película"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "de",
+    "title" : [
+      {"lang" : "en", "value" : "The Neverending Story"},
+      {"lang" : "es", "value" : "La historia interminable"},
+      {"lang" : "es", "value" : "La historia sin fin"},
+      {"lang" : "de", "value" : "Die unendliche Geschichte"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Mission: Impossible"},
+      {"lang" : "en", "value" : "Mission: Impossible 1"},
+      {"lang" : "es", "value" : "Misión imposible"},
+      {"lang" : "es", "value" : "Misión imposible 1"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Pride and Prejudice"},
+      {"lang" : "es", "value" : "Orgullo y prejuicio"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Edward Scissorhands"},
+      {"lang" : "es", "value" : "Eduardo Manostijeras"}
+    ]
+  },
+  {
+    "frame" : "frame0",
+    "lang" : "en",
+    "title" : [
+      {"lang" : "en", "value" : "Ocean's Eleven"},
+      {"lang" : "en", "value" : "Ocean's Eleven"},
+      {"lang" : "es", "value" : "Ocean's Eleven (Hagan Juego)"},
+      {"lang" : "es", "value" : "Hagan Juego"}
     ]
   }
 ]
