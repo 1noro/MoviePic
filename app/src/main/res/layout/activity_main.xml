@@ -39,7 +39,7 @@
                 android:contentDescription="@string/iconDescription"
                 android:maxHeight="125dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/ic_bowler_svg" />
+                app:srcCompat="@drawable/ic_bowler_bg" />
 
             <TextView
                 android:id="@+id/helpTitle"
@@ -81,6 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:background="@drawable/btn_layer"
                         android:gravity="center"
                         android:minWidth="240dp"
                         android:padding="25dp"
@@ -100,6 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:background="@drawable/btn_layer"
                         android:gravity="center"
                         android:minWidth="240dp"
                         android:padding="25dp"
@@ -119,6 +121,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_span="2"
+                        android:background="@drawable/btn_layer"
                         android:gravity="center"
                         android:minWidth="120dp"
                         android:onClick="alertNotAvailable"
@@ -138,6 +141,7 @@
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/btn_layer"
                         android:gravity="center"
                         android:minWidth="120dp"
                         android:onClick="alertNotAvailable"
@@ -151,6 +155,7 @@
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/btn_layer"
                         android:gravity="center"
                         android:minWidth="120dp"
                         android:onClick="alertNotAvailable"

@@ -9,11 +9,11 @@
     <string name="textLevel1">Esenciais</string>
     <string name="textLevel2">Doadas</string>
 
-    <string name="help1">Adiviña o título completo da película baseándote no único fotograma amosado.</string>
-    <string name="help2">Non precisas introducir nin acentos nin signos de puntuación na respuesta.</string>
-    <string name="help3">Tampouco importa se a resposta está en maiúsculas o minúsculas.</string>
-    <string name="help4">Os niveis adoitan tener 30 películas cada un. É preciso adiviñar 20 películas antes de avanzar cara o siguiente nivel.</string>
-    <string name="help5">A partida gardase de forma automática no teu dispositivo. Se borras os datos da App perderase o teu progreso.</string>
+    <string name="help1">Adiviña o título completo da película baseándote no único fotograma amosado</string>
+    <string name="help2">Non precisas introducir nin acentos nin signos de puntuación na respuesta</string>
+    <string name="help3">Tampouco importa se a resposta está en maiúsculas o minúsculas</string>
+    <string name="help4">Os niveis adoitan tener 30 películas cada un. É preciso adiviñar 20 películas antes de avanzar cara o siguiente nivel</string>
+    <string name="help5">A partida gardase de forma automática no teu dispositivo. Se borras os datos da App perderase o teu progreso</string>
 
     <string name="answerButtonDesc">responder FAB</string>
     <string name="answerTitle">Escribe o título</string>
@@ -42,4 +42,5 @@
     <string name="ok">Aceptar</string>
     <string name="levelCompleted">Nivel completado!</string>
     <string name="helpButtonDesc">axuda</string>
+    <string name="help0">Pasa o dedo cara á dereita cara á esquerda pola lista de fotogramas</string>
 </resources>
