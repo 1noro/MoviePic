@@ -111,14 +111,6 @@
     ]
   },
   {
-    "frame" : "frame0",
-    "lang" : "en",
-    "title" : [
-      {"lang" : "en", "value" : "The Big Lebowski"},
-      {"lang" : "es", "value" : "El gran Lebowski"}
-    ]
-  },
-  {
     "frame" : "frame44",
     "lang" : "en",
     "title" : [
