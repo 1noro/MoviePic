@@ -3,9 +3,12 @@ package net.a3do.app.moviepic;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.util.Log;
 
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -27,10 +30,12 @@ public class Level {
     private String[] lastFailedAnswersArray;
     private boolean minimumExceeded = false;
     private boolean levelCompleted = false;
+    private int levelId;
 
     public Level(Context context, int levelId, int levelItemJsonId) {
         this.context = context;
         this.fileStatusDir = "levelStatus" + levelId + ".json";
+        this.levelId = levelId;
 
         try {
             this.levelArray = new JSONArray(GameUtils.readJsonFile(this.context, levelItemJsonId));
@@ -83,6 +88,12 @@ public class Level {
             if (levelStatusArray.length() >= MainActivity.unlockNextLevel && !this.minimumExceeded) {
                 this.minimumExceeded = true;
                 GameUtils.showAlertDialog(context, context.getResources().getString(R.string.congratulations), context.getResources().getString(R.string.nextLevelUnlocked), context.getResources().getString(R.string.ok));
+
+                // level_up Analytics
+                Bundle bundle = new Bundle();
+                bundle.putString(FirebaseAnalytics.Param.CHARACTER, "Level " + (this.levelId + 1) + " unlocked");
+                bundle.putLong(FirebaseAnalytics.Param.LEVEL, this.levelId + 1);
+                FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.LEVEL_UP, bundle);
             }
             if (levelStatusArray.length() >= levelArray.length() && !this.levelCompleted) {
                 this.levelCompleted = true;
